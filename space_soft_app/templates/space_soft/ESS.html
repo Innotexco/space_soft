@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% load static tailwind_tags %}
+
+{% block title %}Spacesoft | Battery{% endblock %}
+
+{% block content %} 
+
+
+<!-- Energy Storage System -->
+<section class="pt-[9em] px-4 sm:px-6 space-y-6">
+    <h1 data-aos="fade-left" data-aos-delay="100" class="text-green-500 text-2xl font-semibold text-center">Energy Storage System (ESS)</h1>
+  
+    <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+      
+      <!-- CARD TEMPLATE -->
+      <!-- Repeat structure for each battery -->
+      <div data-aos="fade-down" data-aos-delay="100" class="flex flex-col shadow-lg rounded-md shadow-neutral-500 bg-white p-4">
+        <h2 class="text-green-500 text-xl font-semibold text-center">Battery Current 200Ah</h2>
+        <div class="pt-3 flex justify-center">
+          <a href="{% url '200ah' %}">
+            <img src="{% static 'img/s1.jpg' %}" class="w-full max-w-[350px] rounded-md object-contain" alt="Energy Storage System">
+          </a>
+        </div>
+        <div class="pt-4 px-2 flex-1 flex flex-col">
+          <p class="text-sm text-gray-700 leading-relaxed">
+            A battery system consists of 1 to 16 battery modules connected in parallel by stacking. Modular stacking design, easy to increase the capacity from 10kWh to 160kWh. Long service life up to 6000 cycles. High-quality LiFePO4 batteries, safe and reliable.
+          </p>
+          <ul class="list-disc ml-4 mt-3 text-sm text-gray-700">
+            <li><strong>Product Models:</strong> SESSLB24AH</li>
+            <li><strong>Nominal Voltage:</strong> 25.6V</li>
+            <li><strong>Battery Rated Capacity:</strong> 200Ah</li>
+            <li><strong>Cycle Life:</strong> >6000 times @ 80% DOD, 25°C</li>
+            <li><strong>Energy Capacity:</strong> 10.2kWh</li>
+            <li><strong>Warranty:</strong> 10 Years</li>
+            <li><strong>Service Life:</strong> Up To 20 Years</li>
+          </ul>
+          <div class="pt-6 text-center mt-auto">
+            <a href="{% url '200ah' %}">
+              <button class="px-4 py-2 bg-green-500 shadow-md shadow-gray-700 text-white hover:bg-green-600 text-sm rounded">
+                Read More
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Repeat the same pattern for other cards -->
+      
+      <!-- Battery Current 300Ah -->
+      <div data-aos="fade-down" data-aos-delay="200" class="flex flex-col shadow-lg rounded-md shadow-neutral-500 bg-white p-4">
+        <h2 class="text-green-500 text-xl font-semibold text-center">Battery Current 300Ah</h2>
+        <div class="pt-3 flex justify-center">
+          <a href="{% url '300ah' %}">
+            <img src="{% static 'img/s1.jpg' %}" class="w-full max-w-[350px] rounded-md object-contain" alt="Energy Storage System">
+          </a>
+        </div>
+        <div class="pt-4 px-2 flex-1 flex flex-col">
+          <p class="text-sm text-gray-700 leading-relaxed">
+            Reliable battery system with 10 years warranty and 6000–8000 cycles. Strong compatibility with LiFePO4 inverters. Ideal for energy storage needs.
+          </p>
+          <ul class="list-disc ml-4 mt-3 text-sm text-gray-700">
+            <li><strong>Product Models:</strong> SESSLB300A</li>
+            <li><strong>Nominal Voltage:</strong> 51.2V</li>
+            <li><strong>Battery Rated Capacity:</strong> 300Ah</li>
+            <li><strong>Cycle Life:</strong> >6000 times @ 80% DOD, 25°C</li>
+            <li><strong>Energy Capacity:</strong> 15.3kWh</li>
+            <li><strong>Warranty:</strong> 10 Years</li>
+            <li><strong>Service Life:</strong> Up To 20 Years</li>
+          </ul>
+          <div class="pt-6 text-center mt-auto">
+            <a href="{% url '300ah' %}">
+              <button class="px-4 py-2 bg-green-500 shadow-md shadow-gray-700 text-white hover:bg-green-600 text-sm rounded">
+                Read More
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Battery Current 336Ah -->
+      <div data-aos="fade-down" data-aos-delay="300" class="flex flex-col shadow-lg rounded-md shadow-neutral-500 bg-white p-4">
+        <h2 class="text-green-500 text-xl font-semibold text-center">Battery Current 336Ah</h2>
+        <div class="pt-3 flex justify-center">
+          <a href="{% url '336ah' %}">
+            <img src="{% static 'img/s1.jpg' %}" class="w-full max-w-[350px] rounded-md object-contain" alt="Energy Storage System">
+          </a>
+        </div>
+        <div class="pt-4 px-2 flex-1 flex flex-col">
+          <p class="text-sm text-gray-700 leading-relaxed">
+            336Ah modular battery system with 17.2kWh capacity. High safety and durability for residential or industrial use with 6000+ cycle life.
+          </p>
+          <ul class="list-disc ml-4 mt-3 text-sm text-gray-700">
+            <li><strong>Product Models:</strong> SESSLB336A</li>
+            <li><strong>Nominal Voltage:</strong> 51.2V</li>
+            <li><strong>Battery Rated Capacity:</strong> 336Ah</li>
+            <li><strong>Cycle Life:</strong> >6000 times @ 80% DOD, 25°C</li>
+            <li><strong>Energy Capacity:</strong> 17.2kWh</li>
+            <li><strong>Warranty:</strong> 10 Years</li>
+            <li><strong>Service Life:</strong> Up To 20 Years</li>
+          </ul>
+          <div class="pt-6 text-center mt-auto">
+            <a href="{% url '336ah' %}">
+              <button class="px-4 py-2 bg-green-500 shadow-md shadow-gray-700 text-white hover:bg-green-600 text-sm rounded">
+                Read More
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Battery Current 600Ah -->
+      <div data-aos="fade-down" data-aos-delay="400" class="flex flex-col shadow-lg rounded-md shadow-neutral-500 bg-white p-4">
+        <h2 class="text-green-500 text-xl font-semibold text-center">Battery Current 600Ah</h2>
+        <div class="pt-3 flex justify-center">
+          <a href="{% url '600ah' %}">
+            <img src="{% static 'img/s1.jpg' %}" class="w-full max-w-[350px] rounded-md object-contain" alt="Energy Storage System">
+          </a>
+        </div>
+        <div class="pt-4 px-2 flex-1 flex flex-col">
+          <p class="text-sm text-gray-700 leading-relaxed">
+            Heavy-duty 600Ah LiFePO4 battery. Scalable from 30kWh to 240kWh, 6000+ cycle life, reliable for industrial or residential power storage.
+          </p>
+          <ul class="list-disc ml-4 mt-3 text-sm text-gray-700">
+            <li><strong>Product Models:</strong> SESSLB600AH</li>
+            <li><strong>Nominal Voltage:</strong> 51.2V</li>
+            <li><strong>Battery Rated Capacity:</strong> 600Ah</li>
+            <li><strong>Cycle Life:</strong> >6000 times @ 80% DOD, 25°C</li>
+            <li><strong>Energy Capacity:</strong> 60.6kWh</li>
+            <li><strong>Warranty:</strong> 10 Years</li>
+            <li><strong>Service Life:</strong> Up To 20 Years</li>
+          </ul>
+          <div class="pt-6 text-center mt-auto">
+            <a href="{% url '600ah' %}">
+              <button class="px-4 py-2 bg-green-500 shadow-md shadow-gray-700 text-white hover:bg-green-600 text-sm rounded">
+                Read More
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+</section>
+
+{%endblock%}
+ 

@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static tailwind_tags %}
+
+{% block title %}Spacesoft | Inverter{% endblock %}
+
+{% block content %} 
+
+<!-- Our Available Hybrid Inverters -->
+<section class="p-4 pt-[9em] sm:px-6 space-y-6 ">
+    <h1 data-aos="fade-down" data-aos-delay="100" class="text-green-500 text-2xl font-semibold text-center capitalize">our available hybrid inverters</h1>
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 px-2">
+
+
+        <!-- 2KVA Hybrid Inverter -->
+        <div data-aos="fade-left" data-aos-delay="100" class="shadow-lg rounded-md shadow-neutral-500 bg-white p-4">
+            <h1 class="text-green-500 text-xl font-semibold text-center">2KVA Hybrid Inverter</h1>
+            <div class="pt-3 flex justify-center">
+                <a href="{% url '2kva' %}">
+                    <img src="{% static 'img/2KWA_Inverter.png' %}" class="w-full h-96 max-w-[350px] object-contain" alt="Energy Storage System">
+                </a>
+            </div>
+            <div class="pt-4 px-4">
+                <p class="text-sm text-gray-700 leading-relaxed">
+                    The 2KVA Hybrid Inverter combines smart technology with reliable performance for both grid and off-grid use. It efficiently switches between solar, battery, and utility power for uninterrupted electricity. With high efficiency and user-friendly controls, it ensures stable power and energy savings. 
+                </p>
+
+                <div class="text-center pt-6">
+                    <a href="{% url '2kva' %}">
+                        <button class="px-4 py-2 bg-green-500 shadow-md shadow-gray-700 text-white hover:bg-green-600 text-sm rounded">
+                            Read More
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+           <!-- 3.2KVA Hybrid Inverter -->
+        <div data-aos="fade-left" data-aos-delay="200" class="shadow-lg rounded-md shadow-neutral-500 bg-white p-4">
+            <h1 class="text-green-500 text-xl font-semibold text-center">3.2KVA Hybrid Inverter</h1>
+            <div class="pt-3 flex justify-center">
+                <a href="{% url '3_2kva' %}">
+                    <img src="{% static 'img/3200KWA_Inverter.png' %}" class="w-full h-96 max-w-[350px] object-contain" alt="Energy Storage System">
+                </a>
+            </div>
+            <div class="pt-4 px-4">
+                <p class="text-justify text-sm text-gray-700 leading-relaxed">
+                    The 3.2KVA Hybrid Inverter intelligently combines solar, grid, and battery power for reliable, uninterrupted electricity. It supports high output for homes or small businesses, ensuring smooth operation during outages. With advanced energy management, it maximizes solar savings and promotes sustainable, cost-effective power use. 
+                </p>
+                <div class="text-center pt-6">
+                    <a href="{% url '3_2kva' %}">
+                        <button class="px-4 py-2 bg-green-500 shadow-md shadow-gray-700 text-white hover:bg-green-600 text-sm rounded">
+                            Read More
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+          <!-- 6.2KVA Hybrid Inverter -->
+        <div data-aos="fade-left" data-aos-delay="300" class="shadow-lg rounded-md shadow-neutral-500 bg-white p-4">
+            <h1 class="text-green-500 text-xl font-semibold text-center">6.2KVA Hybrid Inverter</h1>
+            <div class="pt-3 flex justify-center">
+                <a href="{% url '6_2kva' %}">
+                    <img src="{% static 'img/6_2KWA_Inverter.png' %}" class="w-full h-96 max-w-[350px] object-contain" alt="Energy Storage System">
+                </a>
+            </div>
+            <div class="pt-4 px-4">
+                <p class="text-justify text-sm text-gray-700 leading-relaxed">
+                    The 6.2KVA Hybrid Inverter efficiently combines solar and grid power for uninterrupted energy supply. It intelligently manages power sources to maximize savings and supports both battery and direct solar input. Ideal for homes and businesses, it ensures reliability, sustainability, and cost-effective energy use. 
+                </p>
+                <div class="text-center pt-6">
+                    <a href="{% url '6_2kva' %}">
+                        <button class="px-4 py-2 bg-green-500 shadow-md shadow-gray-700 text-white hover:bg-green-600 text-sm rounded">
+                            Read More
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10.2KVA Hybrid Inverter -->
+        <div data-aos="fade-left" data-aos-delay="400" class="shadow-lg rounded-md shadow-neutral-500 bg-white p-4">
+            <h1 class="text-green-500 text-xl font-semibold text-center">10.2KVA Hybrid Inverter</h1>
+            <div class="pt-3 flex justify-center">
+                <a href="{% url '10_2kva' %}">
+                    <img src="{% static 'img/10200W_Inverter.png' %}" class="w-full h-96 max-w-[350px] object-contain" alt="Energy Storage System">
+                </a>
+            </div>
+            <div class="pt-4 px-4">
+                <p class="text-justify text-sm text-gray-700 leading-relaxed">
+                    The 10.2KVA Hybrid Inverter is a smart, high-capacity power solution for homes and businesses. It integrates solar, grid, and battery sources for seamless, efficient energy management. Key features include automatic voltage regulation, silent operation, and real-time monitoring. 
+                </p>
+                <div class="text-center pt-6">
+                    <a href="{% url '10_2kva' %}">
+                        <button class="px-4 py-2 bg-green-500 shadow-md shadow-gray-700 text-white hover:bg-green-600 text-sm rounded">
+                            Read More
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+     
+        
+    </div>
+</section>
+
+
+{% endblock %}
+ 

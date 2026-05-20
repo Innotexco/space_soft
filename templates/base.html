@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+{% load static tailwind_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/spacesoft.css' %}">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="{% static 'css/icons/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+
+    <!-- AOS CSS Scroll animation -->  
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+    <script src="{% static 'js/aos.js' %}"></script>
+
+    <title>{% block title %}Home{% endblock %}</title>
+    <script src="{% static 'js/sweetalert2.all.min.js' %}"></script>
+    <script src="{% static 'js/flowbite.js' %}"></script>
+</head>
+<body class="bg-slate-100">
+    <script>
+        window.addEventListener('load', function () {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: false,
+                mirror: false,
+                disable: 'mobile'
+            });
+        });
+    </script>
+ 
+    <header class=" fixed z-50 left-0 right-0 top-0">
+        <!-- FIRST NAV BAR -->
+        <nav class=" bg-slate-100 px-3  py-2 flex justify-between items-center text-center">
+            <div class="flex justify-center items-center" data-aos="fade-right" data-aos-duration="800">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'img/logo1.png' %}" class="w-[100px] max-w-full h-auto md:w-[150px] sm:w-[120px]" alt="Responsive Logo">
+                </a>
+            </div>        
+
+            <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="200" class="">
+                <ul class=" group justify-center items-center text-center flex gap-10">
+                    <li class=" flex gap-2 items-center hover:text-green-700">
+                        <a 
+                        href="https://wa.me/2349024433383" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        class=" flex gap-2 items-center hover:text-green-700"
+                        >
+                            <span class=" ">
+                                <i class="bi bi-whatsapp text-black hover:text-green-700 text-2xl"></i>
+                            </span>
+                            <article class=" hidden md:block lg:block">
+                                <h4>+(234) 9024433383</h4>
+                            </article>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a 
+                        href="mailto:info@spacesoftintegrals.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="flex gap-2 items-center hover:text-green-700">
+                            <span class=" ">
+                                <i class="bi bi-envelope-at text-black hover:text-green-700 text-2xl"></i>
+                            </span>
+                            <article  class=" hidden md:block  lg:block">
+                                <h4>info@spacesoftintegrals.com</h4>
+                            </article>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- SECOND NAV BAR -->
+        <nav id="navbar" class=" bg-neutral-700 px-3  py-2 z-50 ">
+
+            <!--THE MENU BAR-->
+            <div class="flex justify-between items-center" data-aos="fade-down" data-aos-duration="1000"  >
+                <div id="menu_icon" class="lg:hidden relative  cursor-pointer menu-icon" onclick="toggle_sidebar()" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200"  >
+                    <span class=" z-40  text-white hover:text-[#57af3c]" >
+                        <i class="bi bi-list font-extrabold text-4xl block w-2xl"></i>
+                    </span>
+                </div>
+
+                <ul class="gap-10 hidden lg:flex justify-center text-[15px] capitalize relative" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400" >
+
+                    <a href="{% url 'home' %}">
+                        <li class="text-gray-100 font-semibold hover:text-[#57af3c]">Home</li>
+                    </a>
+                
+                    <!-- Services Dropdown -->
+                    <li class="relative text-gray-100 font-semibold cursor-pointer group">
+                        <span onclick="toggleDropdown('servicesDropdown')" class="flex dropdown-toggle items-center gap-1 hover:text-[#57af3c]">
+                            Services
+                            <!-- Chevron Down Icon -->
+                            <svg class="w-4 h-4 " xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span>
+                        <ul id="servicesDropdown"
+                            class="absolute dropdown-menu left-0 mt-2 w-52 bg-neutral-800 shadow-lg rounded-md hidden z-50">
+                            <a href="#">
+                                <li class="px-4 py-2 hover:bg-[#57af3c] text-white">Solar Project</li>
+                            </a>
+                            <a href="{% url 'career_dev' %}">
+                                <li class="px-4 py-2 hover:bg-[#57af3c] text-white">Career Development</li>
+                            </a>
+                            <a href="{% url 'software_dev' %}">
+                                <li class="px-4 py-2 hover:bg-[#57af3c] text-white">Software Development</li>
+                            </a>
+                        </ul>
+                    </li>
+                
+                    <!-- Products Dropdown -->
+                    <li class="relative text-gray-100 font-semibold cursor-pointer group">
+                        <span onclick="toggleDropdown('productsDropdown')" class="flex items-center dropdown-toggle gap-1 hover:text-[#57af3c]">
+                            Products
+                            <!-- Chevron Down Icon -->
+                            <svg class="w-4 h-4 " xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span>
+                        <ul id="productsDropdown" class="absolute dropdown-menu left-0 mt-2 w-52 bg-neutral-800 shadow-lg rounded-md hidden z-50">
+                            <a href="{% url 'solar_p' %}">
+                                <li class="px-4 py-2 hover:bg-[#57af3c] text-white">Solar Panel</li>
+                            </a>
+                            <a href="{% url 'battery' %}">
+                                <li class="px-4 py-2 hover:bg-[#57af3c] text-white">Lithium Battery</li>
+                            </a>
+                            <a href="{% url 'inverter' %}">
+                                <li class="px-4 py-2 hover:bg-[#57af3c] text-white">Inverter</li>
+                            </a>
+                            <a href="https://afrikbook.com/" target="_blank" rel="noopener noreferrer">
+                                <li class="px-4 py-2 hover:bg-[#57af3c] text-white">Afrikbook</li>
+                            </a>
+                        </ul>
+                    </li>
+                    
+                    
+                    <a href="{% url 'potfolio' %}">
+                        <li class="text-gray-100 font-semibold hover:text-[#57af3c]">Portfolio</li>
+                    </a>
+                    
+                    <a href="{% url 'about' %}">
+                        <li class="text-gray-100 font-semibold hover:text-[#57af3c]">About Us</li>
+                    </a>
+                    
+                    <a href="{% url 'contact' %}">
+                        <li class="text-gray-100 font-semibold hover:text-[#57af3c]">Contact</li>
+                    </a>
+                </ul>
+                
+                
+                
+                <div class=" flex gap-2 items-center">
+                    <a href="{% url 'contact' %}">
+                        <span class=" px-2 py-1 bg-[#5cd837] hover:bg-[#57af3c] rounded-lg  text-[1em]">
+                            Request  Consultation
+                        </span>               
+                    </a>
+                    <a href="tel:+2349024433383">
+                        <span class="px-4 py-1 bg-[#5cd837] hover:bg-[#57af3c] rounded-md text-white">
+                            <i class="bi bi-phone text-black text-lg"></i>
+                        </span>             
+                    </a>
+                </div>
+            </div>
+        </nav>
+    
+        
+        <!-- Responsive sidebar Menu -->
+        <div id="side_bar" class="hidden items-start p-0">
+            <!-- Sidebar Navigation -->
+            <ul class="fixed z-50 top-[104px] bottom-0 w-[190px] capitalize text-left flex flex-col gap-2 bg-neutral-700 overflow-y-auto">
+                
+                
+                <li> <a href="{% url 'home' %}" class="block hover:text-[#57af3c] text-gray-100 font-medium text-base py-2 px-4"> Home </a></li>
+                
+                <li>
+                    <button onclick="toggleSidebarDropdown('sidebarServicesDropdown')" class="flex justify-between items-center w-full px-4 py-2 text-gray-100 hover:text-[#57af3c] font-medium text-base">
+                        Services
+                        <svg class="w-4 h-4 ml-2 transition-transform duration-300" id="icon-sidebarServicesDropdown" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <ul id="sidebarServicesDropdown" class="hidden flex-col pl-2 text-sm">
+                        <li>
+                            <a href="#" class="block text-white font-medium  py-2 px-4 hover:bg-[#57af3c]">Solar Project</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'career_dev' %}" class="block text-white py-2 font-medium px-4 hover:bg-[#57af3c]">Career Development</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'software_dev' %}" class="block text-white py-2 font-medium px-4 hover:bg-[#57af3c]">Software Development</a>
+                        </li>
+                    </ul>
+                </li>
+            
+                <li>
+                    <button onclick="toggleSidebarDropdown('sidebarProductsDropdown')" class="flex justify-between items-center w-full px-4 py-2 text-gray-100 hover:text-[#57af3c] font-medium text-base">
+                        Products
+                        <svg class="w-4 h-4 ml-2 transition-transform duration-300" id="icon-sidebarProductsDropdown" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <ul id="sidebarProductsDropdown" class="hidden flex-col pl-4 text-sm">
+                        <li>
+                            <a href="{% url 'solar_p' %}" class="block text-white font-medium py-2 px-4 hover:bg-[#57af3c]">Solar Panel</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'battery' %}" class="block text-white py-2 px-4 font-medium hover:bg-[#57af3c]">Lithium Battery</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'inverter' %}" class="block text-white py-2 px-4 font-medium hover:bg-[#57af3c]">Inverter</a>
+                        </li>
+                        <li>
+                            <a href="https://acc.afrikbook.com/home" target="_blank" rel="noopener noreferrer" class="block font-medium text-white py-2 px-4 hover:bg-[#57af3c]">
+                                Afribook
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="{% url 'potfolio' %}" class="block hover:text-[#57af3c] text-gray-100 font-medium text-base py-2 px-4">Portfolio</a></li>
+                <li><a href="{% url 'about' %}" class="block hover:text-[#57af3c] text-gray-100 font-medium text-base py-2 px-4">About</a></li>
+                <li><a href="{% url 'contact' %}" class="block hover:text-[#57af3c] text-gray-100 font-medium text-base py-2 px-4">Contact</a></li>
+            </ul>  
+        </div>
+
+    </header>
+
+
+    
+    {% if messages %}
+        {% for message in messages %}
+            <script>
+                var tag = "{{message.tags}}"
+                Swal.fire({
+                    icon: tag,
+                    title: "{{message|capfirst}}",
+                    timer: 5000,
+                    timerProgressBar: true,
+                    showConfirmButton: false,
+                    showCloseButton: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                })
+                
+            </script>
+        {% endfor %}
+    {% endif %}
+    
+    {% block content %}
+    {% endblock %}
+
+    <footer data-aos="fade-up" data-aos-duration="1000" class="bg-neutral-700 text-sm text-gray-300 mt-4">
+        <!-- Quick Links & Services -->
+        <div class="flex flex-col md:flex-row justify-between px-5 md:px-10 lg:px-32 xl:px-64 pt-10">
+            <!-- Quick Links -->
+            <div>
+                <h1 class="text-white text-xl">Quick Links</h1>
+                <a href="{% url 'home' %}">
+                    <h1 class="hover:text-white pt-3"><i class="bi bi-house-door-fill mr-1"></i>Home</h1>
+                </a>
+                <a href="{% url 'about' %}">
+                    <h1 class="hover:text-white pt-2"><i class="bi bi-info-circle-fill mr-1"></i>About Us</h1>
+                </a>
+                <a href="{% url 'contact' %}">
+                    <h1 class="hover:text-white pt-2"><i class="bi bi-envelope-fill mr-1"></i>Contact Us</h1>
+                </a>
+            </div>
+    
+            <!-- Services -->
+            <div class="text-start md:text-end mt-8 md:mt-0">
+                <h1 class="text-white text-xl">Our Services</h1>
+                <a href="{% url 'solar_p' %}">
+                    <h1 class="hover:text-white pt-3"><i class="bi bi-sun-fill mr-1"></i>Solar Installations</h1>
+                </a>
+                <a href="{% url 'software_dev' %}">
+                    <h1 class="hover:text-white pt-2"><i class="bi bi-laptop-fill mr-1"></i>Software Development</h1>
+                </a>
+            </div>
+        </div>
+    
+        <!-- Contact Info -->
+        <div class="px-5 md:px-10 lg:px-32 xl:px-64 py-10">
+            <h1 class="text-white text-xl">Contact Address</h1>
+            <div class="flex flex-col md:flex-row justify-between mt-3">
+                <!-- Address -->
+                <div>
+                    <!-- <a href="https://maps.google.com/?q=No+14+Dennis+Osadebe+Way,+Asaba" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="block pt-3 hover:text-white">
+                        <i class="bi bi-geo-alt-fill mr-1"></i> No 14 Dennis Osadebe Way, Asaba
+                    </a> -->
+                    <h1 class="block pt-3 hover:text-white">
+                        <i class="bi bi-geo-alt-fill mr-1"></i> No 14 Dennis Osadebay <br> Way, Asaba, Delta State, Nigeria
+
+                    </h1>
+                </div>
+    
+                <!-- Contact -->
+                <div class="text-start md:text-end mt-6 md:mt-0">
+                    <h1 class="hover:text-white">
+                        <a href="https://wa.me/2349024433383" target="_blank" class="hover:text-green-400 transition">
+                            <i class="bi bi-whatsapp mr-1 "></i>+2349024433383
+                        </a>
+                    </h1>
+                    <h1 class="hover:text-white"><i class="bi bi-envelope-at-fill mr-1"></i> info@spacesoftintegrals.com</h1>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="flex justify-center pb-10">
+            <h1 class="hover:text-white text-center">
+                &copy; 2025 All rights reserved by SpaceSoft Integrals System
+            </h1>
+        </div>
+    </footer>
+    
+   
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'js/tailwind.js'%}"></script>
+    <script src="{% static 'js/spacesoft.js' %}"></script>
+    
+</body>
+</html>

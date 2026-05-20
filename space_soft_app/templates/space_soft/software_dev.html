@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% load static tailwind_tags %}
+
+{% block title %}Spacesoft | Software development{% endblock %}
+
+{% block content %} 
+
+<!-- SECTION ONE: OUR SERVICES -->
+<section class="grid grid-cols-1 gap-10 pt-[9em] mb-10 px-5 md:px-10 lg:px-32 xl:px-64 text-center items-center">
+    <!-- Title -->
+    <div>
+        <h1 data-aos="flip-up" class="text-3xl md:text-4xl font-bold text-gray-900">Our Services</h1>
+    </div>
+
+    <!-- WEBSITE DEVELOPMENT -->
+    <div data-aos="fade-up" data-aos-delay="100" class="bg-white shadow-lg rounded-md shadow-neutral-500 grid grid-cols-1 2xl:grid-cols-2 gap-6 p-6 md:p-8">
+        <!-- Image Section -->
+        <div class="flex justify-center items-center">
+            <img src="{% static 'img/php.png' %}" class="w-full h-auto max-w-[400px] object-cover rounded-md" alt="Website Development">
+        </div>
+        <!-- Content Section -->
+        <div data-aos="fade-down" data-aos-delay="150" class="text-start flex flex-col justify-center">
+            <h2 class="text-green-500 text-2xl font-semibold mb-4">Website Development</h2>
+            <p class="text-justify text-lg leading-relaxed ">
+                We craft stunning, functional, and user-centric websites tailored to elevate your brand. 
+                By blending creativity, modern technology, and a results-driven approach, we help businesses 
+                establish a powerful online presence that engages audiences and drives conversions.
+            </p>
+            <h3 class="text-green-500 text-xl font-medium mt-4 mb-2">
+                Why Choose Us for Web Development?
+                <hr class="border-t-2 border-green-500 mt-2 w-2/3">
+            </h3>
+            <ul class="list-disc list-inside text-lg leading-relaxed space-y-2">
+                <li>Delivers an exceptional user experience (UX)</li>
+                <li>Is fast, responsive, and mobile-friendly</li>
+                <li>Adheres to SEO best practices for higher search rankings</li>
+                <li>Integrates seamlessly with your business needs</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MOBILE APP DEVELOPMENT -->
+    <div data-aos="fade-down" data-aos-delay="200" class="bg-white shadow-lg rounded-md shadow-neutral-500 grid grid-cols-1 2xl:grid-cols-2 gap-6 p-6 md:p-8">
+        <!-- Image Section -->
+        <div class="flex justify-center items-center">
+            <img src="{% static 'img/tech.png' %}" class="w-auto h-auto sm:max-w-[400px] object-cover rounded-md" alt="Mobile App Development">
+        </div>
+        <!-- Content Section -->
+        <div data-aos="fade-up" data-aos-delay="250" class="text-start flex flex-col justify-center">
+            <h2 class="text-green-500 text-2xl font-semibold mb-4">Mobile App Development</h2>
+            <p class="text-justify text-lg leading-relaxed">
+                At Spacesoft, we specialize in building innovative and user-centric mobile applications tailored to meet your unique business needs. Whether you are a startup or an established enterprise, we design and develop feature-rich, scalable, and secure apps that deliver exceptional user experiences across all platforms.
+            </p>
+            <p class="mt-4 text-justify text-lg leading-relaxed">
+                From concept to deployment, our team of experts leverages the latest technologies and frameworks to build high-performance mobile apps that align with your business goals. We ensure seamless functionality, stunning visuals, and engaging user interfaces.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION TWO-->
+<section>
+    <div  class=" py-10  px-5 md:px-10 lg:px-32 xl:px-64 lg:tracking-widest bg-neutral-700 sm::h-[500px]">
+        <div data-aos="zoom-in-up" class=" text-white font-serif grid-cols-1 grid gap-3 sm:gap-6 ">
+            <h1 class=" text-3xl sm:text-6xl">We Create, </h1>
+            <h1 class=" text-3xl sm:text-6xl">Design, Power</h1>
+            <h1 class=" text-3xl sm:text-6xl"> and Connect</h1>
+            <h1 class=" sm:text-xl">Have a question or need a custom quote?</h1>
+            <a href="{% url 'contact' %}">
+                <button class="px-6 py-3 bg-[#56c734] shadow-md shadow-gray-700 text-white rounded-md hover:bg-[#57af3c] sm:text-lg transition duration-300">
+                    Contact Us
+                </button>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION FOUR, OUR PARTNERS -->
+<section class=" py-10 my-10 flex justify-center flex-col shadow-lg rounded-md shadow-neutral-500 gap-10 bg-neutral-50">
+    <div data-aos="fade-up" class="text-center">
+        <h1 class="text-4xl font-semibold text-gray-800 pb-5">Our Partners</h1>
+    </div>
+
+    <!-- Partner Logos -->
+    <div class="flex flex-wrap justify-around gap-10 lg:gap-16 items-center">
+        <div data-aos="fade-left" data-aos-delay="100" class="flex justify-center">
+            <img src="{% static 'img/cool.png' %}" class="w-[120px] sm:w-[150px] lg:w-[180px] transition-transform transform hover:scale-110" alt="Partner 1">
+        </div>
+        <div data-aos="fade-left" data-aos-delay="200" class="flex justify-center">
+            <img src="{% static 'img/dicnetlogo1.jpg' %}" class="w-[120px] sm:w-[150px] lg:w-[180px] transition-transform transform hover:scale-110" alt="Partner 2">
+        </div>
+        <div data-aos="fade-left" data-aos-delay="300" class="flex justify-center">
+            <img src="{% static 'img/ARK-J_Ltd.png' %}" class="w-[120px] sm:w-[150px] lg:w-[180px] pt-2 transition-transform transform hover:scale-110" alt="Partner 3">
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

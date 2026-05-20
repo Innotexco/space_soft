@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+{% load static tailwind_tags %}
+
+{% block title %}Spacesoft | About{% endblock %}
+
+{% block content %} 
+
+
+<!-- ABOUT US SECTION -->
+<section class="xl:px-64 px-5 py-10 pt-[9em] bg-slate-100">
+    <!-- Section Title -->
+    <h1 class="text-3xl font-bold text-center mb-5" data-aos="fade-up">About Us</h1>
+    
+    <div data-aos="fade-up" class=" bg-white shadow-lg rounded-md shadow-neutral-500 group grid grid-cols-1 gap-10 px-4 pb-20 text-center relative py-6">
+
+        <!-- Content Section -->
+        <div>
+            <img src="{% static 'img/aboutpic2.jpg' %}" class="w-full sm:h-[460px] md:object-fill rounded-md" alt="About Us">
+        </div>
+        <div class="flex flex-col lg:flex-row justify-between items-start gap-5 text-start">
+            <!-- Left Content -->
+            <div data-aos="fade-left" class="w-full xl:w-1/2">
+                <div class="tracking-wide pt-2 text-lg text-gray-700 leading-relaxed">
+                    <p class="text-justify">
+                        Spacesoft Integral System Ltd is a forward thinking ICT and energy solution company commited to building smarter, and more connected enviroments. We specializes in <strong>Software Development (Website and Mobile Apps)</strong>. We also offer reliable renewable energy solutions, Like <strong>Solar System Installations</strong>, and <strong>Inverter setup</strong> 
+                    </p>
+                    <p class="py-4 text-justify">
+                        In a short time, Spacesoft has earned a reputation as one of Nigeria's leading ICT Companies and renewable energy Companies, driven by integrity, 
+                        cost-innovation, and deep commitment to solving real-world challenges.
+                    </p>
+                    <h2 class="text-green-700 text-center text-2xl font-bold pb-2 w-full">We Create, Design, Power, and Connect.</h2>
+                    <h2 class="text-green-600 text-2xl font-semibold pt-4 pb-4">Our Story</h2>
+                    <p class="text-justify">
+                        Founded by <strong>Innocent Alexander</strong>, a former lecturer at <em>John Bosco Institute of Technology</em>, Onitsha, 
+                        Spacesoft was officially incorporated as a Limited Liability Company in <strong>2017</strong>. What started as a small ICT consultancy has evolved into a full-fledged tech and energy company with a growing footprint in Nigeria.
+                    </p>
+                    <p class="pt-4 text-justify">
+                        Our head office is located in <strong>Asaba, Delta State</strong>, where our team continue to serve 
+                        clients with tailored solutions that deliver measurable, long-term impact.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Right Content -->
+            <div data-aos="fade-right" class="w-full xl:w-1/2">
+                <div class="tracking-wide text-lg text-gray-700 text-justify leading-relaxed">
+                    
+                    <!-- Mission -->
+                    <h2 class="text-green-600 text-2xl font-semibold pt-2 pb-2">Our Mission</h2>
+                    <p class="pt-2">
+                        To design, develop, and deliver cutting-edge electronics, sustainable green energy solutions, and locally-driven software innovations that empower Africa’s industries, reduce import dependency, and accelerate the continent’s technological and economic self-reliance.
+                    </p>
+                    
+                    <!-- Vision -->
+                    <h2 class="text-green-600 text-2xl font-semibold pt-6 pb-2">Our Vision</h2>
+                    <p class="pt-2">
+                        To be Africa’s leading hub for indigenous innovation in electronics, clean energy, and software technology-driving a future where Africa builds what it needs, powers its growth sustainably, and competes on the global stage with locally developed solutions.
+                    </p>
+
+
+
+                    <!-- Client List -->
+                    <h2 class="text-green-600 text-2xl font-semibold pt-6 pb-4">Our Clients</h2>
+                    <ul class="list-disc pl-5 text-gray-800">
+                        <li>Dayspring Assembly - <a href="http://www.dayspringassembly.org.ng" class="text-blue-600 hover:underline">www.dayspringassembly.org.ng</a></li>
+                        <li>Vecan Cable Ltd - <a href="http://www.vecans.com.ng" class="text-blue-600 hover:underline">www.vecans.com.ng</a></li>
+                        <li>Ezebo Microfinance Bank, Anambra</li>
+                        <li>Bebeto Pharmaceutical Ltd, Uyo</li>
+                        <li>Ministry of Youth, Delta State</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- what we do-->
+<section class=" xl:px-64 px-5 ">
+    <p 
+    data-aos="fade-zoom-in" 
+    date-aos-duration="3000" 
+    class=" text-3xl font-bold text-center mb-10">What We Do</p>
+    
+    <div class="flex flex-wrap">
+        <div class="grid gap-8 md:grid-cols-3">
+      
+            <!-- Solar Installation -->
+            <div 
+            data-aos="fade-left" 
+            data-aos-duration="1000" 
+            class="bg-white p-6 rounded-xl shadow text-center hover:shadow-md transition">
+                <div class="text-yellow-500 text-5xl mb-4">
+                <i class="bi bi-brightness-high-fill"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Solar Installation</h3>
+                <p class="text-gray-600">We provide sustainable solar power solutions tailored to meet residential and commercial energy needs.</p>
+            </div>
+
+            <!-- Software Development -->
+            <div 
+            data-aos="fade-left" 
+            data-aos-duration="2000" 
+            class="bg-white p-6 rounded-xl shadow text-center hover:shadow-md transition">
+                <div class="text-blue-600 text-5xl mb-4">
+                <i class="bi bi-laptop"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Software Development</h3>
+                <p class="text-gray-600">Custom web and mobile applications built to optimize your business operations and growth.</p>
+            </div>
+
+            <!-- Inverter Setup -->
+            <div 
+            data-aos="fade-left" 
+            data-aos-duration="3000" 
+            class="bg-white p-6 rounded-xl shadow text-center hover:shadow-md transition">
+                <div class="text-green-600 text-5xl mb-4">
+                <i class="bi bi-battery-charging"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Inverter Setup</h3>
+                <p class="text-gray-600">Reliable inverter installation and maintenance services for uninterrupted power supply.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- why choose us -->
+<section class=" xl:px-64 px-5 p-10">
+    <div data-aos="fade-up" class="text-center mb-12">
+        <h2 class="text-3xl font-bold">Why Choose Us</h2>
+        <p class="text-gray-600 mt-2">We deliver exceptional solar, software, and power solutions that empower your future.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+        <!-- Card 1 -->
+        <div data-aos="fade-right" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <div class="text-blue-500 text-4xl mb-4">
+            <i class="bi bi-lightning-charge-fill"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Reliable Inverter Setup</h3>
+        <p class="text-gray-600">We install efficient inverter systems that guarantee continuous power without compromise.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div data-aos="fade-up" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+            <div class="text-green-500 text-4xl mb-4">
+                <i class="bi bi-brightness-high-fill"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Sustainable Solar Energy</h3>
+            <p class="text-gray-600">Our solar installations are designed to maximize energy output and reduce carbon footprint.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div data-aos="fade-left" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+            <div class="text-purple-500 text-4xl mb-4">
+                <i class="bi bi-code-slash"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Software Solutions</h3>
+            <p class="text-gray-600">We build smart, scalable software that transforms your business and drives growth.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div data-aos="fade-left" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+            <div class="text-yellow-500 text-4xl mb-4">
+                <i class="bi bi-shield-check"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Trusted Expertise</h3>
+            <p class="text-gray-600">With a team of certified professionals, we deliver safe and dependable installations and services.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div data-aos="flip-left" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+            <div class="text-red-500 text-4xl mb-4">
+                <i class="bi bi-headset"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">24/7 Customer Support</h3>
+            <p class="text-gray-600">We offer dedicated support to assist with maintenance, upgrades, and queries anytime.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div data-aos="fade-right" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+            <div class="text-indigo-500 text-4xl mb-4">
+                <i class="bi bi-currency-dollar"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Affordable Solutions</h3>
+            <p class="text-gray-600">Our pricing is competitive, transparent, and tailored to your energy and software needs.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- OUR Skills Section -->
+<section class="xl:px-64 px-5 text-center py-10">
+    <h2 data-aos="zoom-in" class="text-4xl font-bold mb-6">Our Skills</h2>
+    <div class="container mx-auto ">
+      <div class="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-3 gap-8">
+        <!-- Skill 1 -->
+        <div 
+        data-aos="fade-up" 
+        data-aos-delay="100" class="bg-white shadow-lg p-6 rounded-lg">
+          <p class="text-lg font-semibold text-gray-800 mb-2">Software Development</p>
+          <div class="bg-gray-200 rounded-full h-5 overflow-hidden">
+            <div class="bg-green-500 h-5 rounded-full flex items-center justify-center text-white text-sm" style="width: 100%;">100%</div>
+          </div>
+        </div>
+  
+        <!-- Skill 2 -->
+        <div 
+        data-aos="fade-up"
+         data-aos-delay="200"
+         class="bg-white shadow-lg p-6 rounded-lg">
+          <p class="text-lg font-semibold text-gray-800 mb-2">Solar Installation</p>
+          <div class="bg-gray-200 rounded-full h-5 overflow-hidden">
+            <div class="bg-green-500 h-5 rounded-full flex items-center justify-center text-white text-sm" style="width: 100%;">100%</div>
+          </div>
+        </div>
+  
+        <!-- Skill 3 -->
+        <div
+         data-aos="fade-up"
+         data-aos-delay="300" class="bg-white shadow-lg p-6 rounded-lg">
+          <p class="text-lg font-semibold text-gray-800 mb-2">Inverter Setup</p>
+          <div class="bg-gray-200 rounded-full h-5 overflow-hidden">
+            <div class="bg-green-500 h-5 rounded-full flex items-center justify-center text-white text-sm" style="width: 100%;">100%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+  
+  
+
+{%endblock%}

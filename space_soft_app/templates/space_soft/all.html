@@ -1,0 +1,405 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>I. S. P</title>
+    <link rel="stylesheet" href="output.css">
+    <script src="https://cdn.tailwindcss.com"></script> 
+</head>
+
+<body class=" bg-slate-100">
+<!-- HEADER -->
+<header class=" fixed z-50 left-0 right-0 top-0">
+    <!-- FIRST NAV BAR -->
+    <nav class="  bg-slate-100 px-3  py-2 flex justify-between items-center text-center">
+    <div class="flex justify-center items-center">
+        <a href="home.html">
+            <img src="img/logo1.png" class="w-[100px] max-w-full h-auto md:w-[150px] sm:w-[120px]" alt="Responsive Logo">
+        </a>
+    </div>        
+
+    <div class="">
+        <ul class=" group justify-center items-center text-center flex gap-10">
+            <!-- <a href=""> -->
+            <li class=" flex gap-4 ">
+                <span class=" ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+                        </svg>
+                </span>
+                <article class=" hidden md:block lg:block">
+                    <h4>+(234) 9024433383</h4>
+                </article>
+            </li>
+        <!-- </a> -->
+
+        <!-- <a href=""> -->
+            <li class=" flex gap-4 ">
+                <span class=" ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                        </svg>                              
+                </span>
+                <article  class=" hidden sm:block  lg:block">
+                    <h4>enquiry@spacesoftintegral.com</h4>
+                </article>
+            </li>
+        <!-- </a> -->
+        </ul>
+    </div>
+    </nav>
+
+    <!-- SECOND NAV BAR -->
+    <nav id="navbar" class=" bg-neutral-700 px-3  py-2 z-50 ">
+
+        <!--THE MENU BAR-->
+    <div class="  flex  justify-between items-center ">
+        <!-- <a href="spacesoft.html"> -->
+            <div class="lg:hidden relative  cursor-pointer menu-icon" onclick="menuBar()">
+                <span class=" z-40  text-white hover:text-[#57af3c]" >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                        <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                        </svg>                          
+                </span>
+            </div>
+        <!-- </a> -->
+
+        <ul class="gap-10 hidden lg:flex justify-center text-[15px] capitalize relative">
+
+            <a href="home.html">
+                <li class="text-gray-100 font-semibold hover:text-[#57af3c]">Home</li>
+            </a>
+        
+            <!-- Services Dropdown -->
+            <li class="relative text-gray-100 font-semibold cursor-pointer group">
+                <span onclick="toggleDropdown('servicesDropdown')" class="flex dropdown-toggle items-center gap-1 hover:text-[#57af3c]">
+                    Services
+                    <!-- Chevron Down Icon -->
+                    <svg class="w-4 h-4 " xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 9l-7 7-7-7" />
+                    </svg>
+                </span>
+                <ul id="servicesDropdown"
+                    class="absolute dropdown-menu left-0 mt-2 w-52 bg-neutral-800 shadow-lg rounded-md hidden z-50">
+                    <a href="solar_project.html">
+                        <li class="px-4 py-2 hover:bg-[#57af3c] text-white">Solar Project</li>
+                    </a>
+                    <a href="software.html">
+                        <li class="px-4 py-2 hover:bg-[#57af3c] text-white">Software Development</li>
+                    </a>
+                </ul>
+            </li>
+        
+        <!-- Products Dropdown -->
+        <li class="relative text-gray-100 font-semibold cursor-pointer group">
+            <span onclick="toggleDropdown('productsDropdown')" class="flex items-center dropdown-toggle gap-1 hover:text-[#57af3c]">
+                Products
+                <!-- Chevron Down Icon -->
+                <svg class="w-4 h-4 " xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 9l-7 7-7-7" />
+                </svg>
+            </span>
+            <ul id="productsDropdown" class="absolute dropdown-menu left-0 mt-2 w-52 bg-neutral-800 shadow-lg rounded-md hidden z-50">
+                <a href="solar_panel.html">
+                    <li class="px-4 py-2 hover:bg-[#57af3c] text-white">Solar Panel</li>
+                </a>
+                <a href="ESS.html">
+                    <li class="px-4 py-2 hover:bg-[#57af3c] text-white">Lithium Battery</li>
+                </a>
+                <a href="https://afrikbook.com/">
+                    <li class="px-4 py-2 hover:bg-[#57af3c] text-white">Afrikbook</li>
+                </a>
+            </ul>
+        </li>
+
+        
+            <a href="portfolio.html">
+                <li class="text-gray-100 font-semibold hover:text-[#57af3c]">Portfolio</li>
+            </a>
+        
+            <a href="about.html">
+                <li class="text-gray-100 font-semibold hover:text-[#57af3c]">About Us</li>
+            </a>
+        
+            <a href="contact.html">
+                <li class="text-gray-100 font-semibold hover:text-[#57af3c]">Contact</li>
+            </a>
+        </ul>
+        
+        
+
+        <a href="contact.html">
+            <div class=" flex gap-2">
+                <button class=" px-2 py-1 bg-[#5cd837] hover:bg-[#57af3c] rounded-lg  text-[12px]">
+                    Request  Consultation
+                </button>               
+                <span class=" pl-2 pr-4 py-1 bg-[#5cd837] hover:bg-[#57af3c] rounded-md text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                        </svg>  
+                </span>             
+            </div>
+        </a>
+        </div>
+    </nav>
+
+    
+    <!-- Responsive Dropdown Menu -->
+    <div class="js-drop lg:hidden flex flex-col items-start p-0">
+        <!-- Sidebar Navigation -->
+        <!-- <ul class="fixed z-50 top-[104px] bottom-0 w-[200px] capitalize text-left flex flex-col gap-2 bg-neutral-700 overflow-y-auto">
+
+           
+            <li>
+                <a href="home.html" class="block hover:text-[#57af3c] text-gray-100 font-medium text-base py-2 px-4">
+                    Home
+                </a>
+            </li>
+
+
+            <li>
+                <button onclick="toggleSidebarDropdown('sidebarServicesDropdown')" class="flex justify-between items-center w-full px-4 py-2 text-gray-100 hover:text-[#57af3c] font-medium text-base">
+                    Services
+                    <svg class="w-4 h-4 ml-2 transition-transform duration-300" id="icon-sidebarServicesDropdown" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <ul id="sidebarServicesDropdown" class="hidden flex-col pl-4 text-sm">
+                    <li>
+                        <a href="solar_project.html" class="block text-white  py-2 px-4 hover:bg-[#57af3c]">Solar Project</a>
+                    </li>
+                    <li>
+                        <a href="software_development.html" class="block text-white py-2 px-4 hover:bg-[#57af3c]">Software Development</a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li>
+                <button onclick="toggleSidebarDropdown('sidebarProductsDropdown')" class="flex justify-between items-center w-full px-4 py-2 text-gray-100 hover:text-[#57af3c] font-medium text-base">
+                    Products
+                    <svg class="w-4 h-4 ml-2 transition-transform duration-300" id="icon-sidebarProductsDropdown" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <ul id="sidebarProductsDropdown" class="hidden flex-col pl-4 text-sm">
+                    <li>
+                        <a href="solar_panel.html" class="block text-white py-2 px-4 hover:bg-[#57af3c]">Solar Panel</a>
+                    </li>
+                    <li>
+                        <a href="ESS.html" class="block text-white py-2 px-4 hover:bg-[#57af3c]">Lithium Battery</a>
+                    </li>
+                    <li>
+                        <a href="https://acc.afrikbook.com/home" class="block text-white py-2 px-4 hover:bg-[#57af3c]">Afribook</a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li><a href="Portfolio.html" class="block hover:text-[#57af3c] text-gray-100 font-medium text-base py-2 px-4">Portfolio</a></li>
+            <li><a href="about.html" class="block hover:text-[#57af3c] text-gray-100 font-medium text-base py-2 px-4">About</a></li>
+            <li><a href="contact.html" class="block hover:text-[#57af3c] text-gray-100 font-medium text-base py-2 px-4">Contact</a></li>
+        </ul>   -->
+    </div>
+
+</header>
+
+<!-- MAIN -->
+<section class="mt-[10px]">
+    <div class="w-full relative mx-auto">
+        <!-- Carousel -->
+        <div id="default-carousel" class="relative" data-carousel="static">
+            <div class="overflow-hidden relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]">
+                <!-- Carousel Items -->
+                <div class="duration-1000 ease-in-out" data-carousel-item>
+                    <img src="img/my panel.jpg" alt="Slide 1"
+                        class="w-full h-full object-cover block absolute top-0 left-0 mix-blend-overlay" />
+                </div>
+                <div class="duration-1000 ease-in-out" data-carousel-item>
+                    <img src="img/cctv adv.jpg" alt="Slide 2"
+                        class="w-full h-full object-cover block absolute top-0 left-0 mix-blend-overlay" />
+                </div>
+                <div class="duration-1000 ease-in-out" data-carousel-item>
+                    <img src="img/sol.jpg" alt="Slide 3"
+                        class="w-full h-full object-cover block absolute top-0 left-0 mix-blend-overlay" />
+                </div>
+            </div>
+
+            <!-- Centered Text -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-40 px-4 sm:px-0">
+                <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+                    Welcome To SpaceSoft Integral
+                </span>
+                <span class="text-lg sm:text-2xl lg:text-4xl mt-4">
+                    System L.T.D
+                </span>
+                <span class="text-sm sm:text-lg md:text-2xl lg:text-3xl mt-2">
+                    Bridging the space in the industry
+                </span>
+            </div>
+
+            <!-- Navigation Dots -->
+            <div class="flex absolute bottom-5 left-1/2 z-40 space-x-3 -translate-x-1/2">
+                <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500" aria-current="false"
+                    data-carousel-slide-to="0"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500" aria-current="false"
+                    data-carousel-slide-to="1"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500" aria-current="false"
+                    data-carousel-slide-to="2"></button>
+            </div>
+
+            <!-- Previous Button -->
+            <button type="button"
+                class="flex absolute top-0 left-0 z-40 justify-center items-center px-2 sm:px-4 h-full cursor-pointer group focus:outline-none"
+                data-carousel-prev>
+                <span
+                    class="inline-flex justify-center items-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#5cd837] hover:bg-[#57af3c] group-focus:ring-4 group-focus:ring-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                </span>
+            </button>
+
+            <!-- Next Button -->
+            <button type="button"
+                class="flex absolute top-0 right-0 z-40 justify-center items-center px-2 sm:px-4 h-full cursor-pointer group focus:outline-none"
+                data-carousel-next>
+                <span
+                    class="inline-flex justify-center items-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#5cd837] hover:bg-[#57af3c] group-focus:ring-4 group-focus:ring-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Flowbite Carousel Script -->
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+
+    <!-- Custom Carousel Autoplay Script -->
+    <script>
+        let carouselInterval;
+
+        const startAutoSlide = () => {
+            carouselInterval = setInterval(() => {
+                // Prevent slide change if any dropdown is open
+                const dropdownOpen = document.querySelector('.dropdown-menu:not(.hidden)');
+                if (!dropdownOpen) {
+                    const nextButton = document.querySelector('[data-carousel-next]');
+                    if (nextButton) {
+                        nextButton.click();
+                    }
+                }
+            }, 3000); // Every 3 seconds
+        };
+
+        const stopAutoSlide = () => clearInterval(carouselInterval);
+
+        // Pause on hover over carousel or navbar
+        const carousel = document.getElementById('default-carousel');
+        const navbar = document.getElementById('navbar');
+
+        [carousel, navbar].forEach(el => {
+            if (el) {
+                el.addEventListener('mouseenter', stopAutoSlide);
+                el.addEventListener('mouseleave', startAutoSlide);
+            }
+        });
+
+        window.onload = startAutoSlide;
+    </script>
+</section>
+
+
+<!-- SECTION FIVE, FOOTER-->
+<section>
+    <div  class=" flex justify-between  lg:px-64 px-4 text-gray-300 text-lg bg-neutral-700  py-10 ">
+        <div class="">
+            <h1 class=" text-white text-xl ">Quick Links</h1>
+            <a href="spacesoft.html">
+                <h1 class=" hover:text-white pt-3">Home</h1>
+            </a>
+            <a href="about.html">
+                <h1 class=" hover:text-white pt-2">About Us</h1>
+            </a>
+            <a href="contact.html">
+                <h1 class=" hover:text-white pt-2">Contact Us</h1>
+            </a>
+        </div>
+        <div class="">
+            <h1 class=" text-white text-xl ">Our Services</h1>
+            <a href="services.html">
+                <h1 class=" hover:text-white pt-3">VSAT Installation</h1>
+            </a>
+            <a href="services.html">
+                <h1 class=" hover:text-white pt-2">FIBER OPTIC</h1>
+            </a>
+            <a href="services.html">
+                <h1 class=" hover:text-white pt-2">Web/Software Development</h1>
+            </a>
+            <a href="services.html">
+                <h1 class=" hover:text-white pt-2">Web Hosting</h1>
+            </a>
+        </div>              
+    </div>
+    <div class="flex justify-between lg:px-64 px-4 text-gray-300  text-lg bg-neutral-700 py-10 ">
+        <div>
+            <h1 class=" text-white text-xl ">Contact Address</h1>
+            <!-- <a href=""> -->
+                <h1 class=" hover:text-white pt-3">No 14 Dennis Osadebe</h1>
+            <!-- </a> -->
+            <!-- <a href=""> -->
+                <h1 class=" hover:text-white pt-2">Way, Cable Point</h1>
+            <!-- </a> -->
+            <!-- <a href=""> -->
+                <h1 class=" hover:text-white pt-2">Asaba</h1>
+            <!-- </a> -->
+        </div>
+        <div>
+            <h1 class=" hover:text-white  ">Main:</h1>
+            <!-- <a href=""> -->
+                <h1 class=" hover:text-white">+2349024433383</h1>
+            <!-- </a> -->
+            <!-- <a href=""> -->
+                <h1 class=" hover:text-white pt-2">Office:</h1>
+            <!-- </a> -->
+            <!-- <a href=""> -->
+                <h1 class=" hover:text-white ">+2349032752274</h1>
+            <!-- </a> -->
+            <!-- <a href=""> -->
+                <h1 class=" hover:text-white pt-2">Mail.</h1>
+            <!-- </a> -->
+            <!-- <a href=""> -->
+                <h1 class=" hover:text-white">enquiry@spacesoftintegrals.co</h1>
+            <!-- </a> -->
+        </div>
+    </div>
+    <div class="flex justify-center text-gray-300 text-sm bg-neutral-700 pb-10">
+        <div>
+            <!-- <a href=""> -->
+                <h1 class=" hover:text-white">
+                    Copyright ©2024 All rights reserved by SpaceSoft Integrals System 
+                </h1>
+            <!-- </a> -->
+        </div>
+    </div>
+    
+</section>
+
+  <script src="spacesoft.js"></script>
+</body>
+
+</html>
+ 

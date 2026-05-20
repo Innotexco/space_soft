@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+{% load static tailwind_tags %}
+
+{% block title %} 6.2KWA Hybrid Inverter{% endblock %}
+
+{% block content %} 
+
+<section class="p-4 pt-[9em]">
+    <!-- 6.2KVA Hybrid Inverter -->
+    <div class="shadow-lg rounded-md shadow-neutral-500 bg-white max-w-lg mx-auto sm:max-w-3xl py-4">
+        <h1 class="text-green-500 text-xl font-semibold text-center">6.2KWA Hybrid Inverter</h1>
+        <!-- Carousel Container -->
+        <div class="w-full relative mt-2 sm:px-10">
+            <div class="swiper progress-slide-carousel swiper-container relative">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="rounded-2xl h-96 flex justify-center items-center overflow-hidden">
+                            <img src="{% static 'img/6_2KWA_Inverter.png' %}" alt="Slide 1" class="object-contain w-full h-full" />
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="rounded-2xl h-96 flex justify-center items-center overflow-hidden">
+                            <img src="{% static 'img/6.2KW_imgs/6_2KW_3.png' %}" alt="Slide 2" class="object-contain w-full h-full" />
+                        </div>
+                    </div> 
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="rounded-2xl h-96 flex justify-center items-center overflow-hidden">
+                            <img src="{% static 'img/6.2KW_imgs/6_2KW_2.png' %}" alt="Slide 2" class="object-contain w-full h-full" />
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- Progressbar Pagination -->
+                <div class="swiper-pagination !bottom-2 !top-auto !w-80 right-0 mx-auto bg-gray-100"></div>
+            </div>
+        </div>
+        
+        <div class="pt-4 px-4">
+            <p class="text-justify text-sm text-gray-700 leading-relaxed">
+                The 6.2KVA Hybrid Inverter seamlessly combines solar power and grid electricity to deliver reliable, efficient, and uninterrupted energy. Designed for versatility and high performance, it intelligently switches between power sources to maximize energy savings while ensuring stable power supply. Its advanced hybrid technology supports both battery storage and direct solar input, offering optimal energy management for homes and businesses alike. With robust build quality and user-friendly controls, this inverter is ideal for reducing energy costs, enhancing sustainability, and maintaining power continuity during outages. Experience the perfect blend of innovation, efficiency, and durability with the 6.2KVA Hybrid Inverter.
+            </p>
+
+                <!-- Responsive Table -->
+            <table class="table-auto border-collapse border mt-4 border-gray-300 w-full text-sm text-left">
+                <thead>
+                <tr class="bg-green-300 ">
+                    <th class="border border-gray-300 p-2">Model</th>
+                    <th class="border border-gray-300 p-2">SCI-EVO-6200</th>
+                </tr>
+                </thead>
+                <tbody class="capitalize">
+                <!-- Rated Power -->
+                <tr>
+                    <td class="border border-gray-300 p-2 font-semibold">Rated Power</td>
+                    <td class="border border-gray-300 p-2">6200W</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2 font-semibold">Maximum PV Input Power</td>
+                    <td class="border border-gray-300 p-2">6500W</td>
+                </tr>
+            
+                <!-- Grid-Tied Operation -->
+                <tr class="bg-green-300">
+                    <td colspan="2" class="border border-gray-300 p-2 font-bold">GRID-TIED OPERATION</td>
+                </tr>
+                <tr class="bg-green-100">
+                    <td colspan="2" class="border border-gray-300 p-2 font-bold">PV INPUT (DC)</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Nominal DC Voltage/Maximum DC Voltage</td>
+                    <td class="border border-gray-300 p-2">360VDC/500VDC</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Start-up Voltage/Initial Feeding Voltage</td>
+                    <td class="border border-gray-300 p-2">90VDC/120VDC</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">MPPT DC Voltage Range</td>
+                    <td class="border border-gray-300 p-2">60-450VDC</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Number of MPPT Trackers/Maximum Input Current</td>
+                    <td class="border border-gray-300 p-2">22A</td>
+                </tr>
+            
+                <!-- Grid Output (AC) -->
+                <tr class="bg-green-300">
+                    <td colspan="2" class="border border-gray-300 p-2 font-bold">GRID OUTPUT (AC)</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Nominal AC Output Voltage</td>
+                    <td class="border border-gray-300 p-2">220/230/240VAC</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">AC Output Voltage Range</td>
+                    <td class="border border-gray-300 p-2">195.5-253VAC</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Nominal AC Output Current</td>
+                    <td class="border border-gray-300 p-2">27.0A</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Power Factor</td>
+                    <td class="border border-gray-300 p-2"> >0.99</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Feed-in Grid Frequency Range</td>
+                    <td class="border border-gray-300 p-2">49-51 ± 1Hz / 59-61±1Hz</td>
+                </tr>
+            
+                <!-- Efficiency -->
+                <tr class="bg-green-100">
+                    <td colspan="2" class="border border-gray-300 p-2 font-bold">EFFICIENCY</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Maximum Conversion Efficiency (Solar to AC)</td>
+                    <td class="border border-gray-300 p-2">98%</td>
+                </tr>
+            
+                <!-- Two loads Output power -->
+                <tr class="bg-green-100">
+                    <td colspan="2" class="border border-gray-300 p-2 font-bold">TWO LOADS OUTPUT POWER</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Full Load</td>
+                    <td class="border border-gray-300 p-2">6200W</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Maximum Main Load</td>
+                    <td class="border border-gray-300 p-2">6200W</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Maximum Secondary Load (Battery mode)</td>
+                    <td class="border border-gray-300 p-2">2067W</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Main Load Cut Off Voltage</td>
+                    <td class="border border-gray-300 p-2">44VDC</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Main Load Return Voltage</td>
+                    <td class="border border-gray-300 p-2">52VDC</td>
+                </tr>
+                
+                <!-- OFF-GRID OPERATION -->
+                <tr class="bg-green-300">
+                    <td colspan="2" class="border border-gray-300 p-2 font-bold">OFF-GRID OPERATION</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">AC Start-up Voltage / Auto Restart Voltage</td>
+                    <td class="border border-gray-300 p-2">120-140VAC / 180VAC</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Acceptable AC Input Voltage Range</td>
+                    <td class="border border-gray-300 p-2">90-280VAC or 170-280VAC</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Maximum AC Input Current</td>
+                    <td class="border border-gray-300 p-2">40A</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Norminal Operating Frequency</td>
+                    <td class="border border-gray-300 p-2">50/60Hz</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Surge Power</td>
+                    <td class="border border-gray-300 p-2">12400W</td>
+                </tr>
+            
+                <!-- Battery Mode Output -->
+                <tr class="bg-green-100">
+                    <td colspan="2" class="border border-gray-300 p-2 font-bold">BATTERY MODE OUTPUT (AC)</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Nominal Output Voltage</td>
+                    <td class="border border-gray-300 p-2">220/230/240VAC</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Output Waveform</td>
+                    <td class="border border-gray-300 p-2">Pure Sine Wave</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Efficiency (DC to AC)</td>
+                    <td class="border border-gray-300 p-2">94%</td>
+                </tr>
+            
+                <!-- Battery and Charger -->
+                <tr class="bg-green-100">
+                    <td colspan="2" class="border border-gray-300 p-2 font-bold">BATTERY AND CHARGER</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Nominal DC Voltage</td>
+                    <td class="border border-gray-300 p-2">48VDC</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Maximum Charging Current (Solar to AC)</td>
+                    <td class="border border-gray-300 p-2">120A</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Maximum AC Charging Current</td>
+                    <td class="border border-gray-300 p-2">100A</td>
+                </tr>
+            
+                <!-- General -->
+                <tr class="bg-green-300">
+                    <td colspan="2" class="border border-gray-300 p-2 font-bold">GENERAL</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Dimension (D x W x H)</td>
+                    <td class="border border-gray-300 p-2">450*350*110mm</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Net Weight (kgs)</td>
+                    <td class="border border-gray-300 p-2">10kg</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Communication Interface</td>
+                    <td class="border border-gray-300 p-2">WIFI</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Humidity</td>
+                    <td class="border border-gray-300 p-2">5-95% (Non-condensing)</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Operating Temperature</td>
+                    <td class="border border-gray-300 p-2">-10°C to 50°C</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Storage Temperature</td>
+                    <td class="border border-gray-300 p-2">-15°C to 60°C</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</section>
+
+{%endblock%}
+ 

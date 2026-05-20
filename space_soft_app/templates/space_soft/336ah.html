@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% load static tailwind_tags %}
+
+{% block title %}336AH Battery{% endblock %}
+
+{% block content %} 
+
+
+<section class="pt-[9em] p-4">
+    <!-- Battery Current 336Ah -->
+    <div class="shadow-lg rounded-md shadow-neutral-500 bg-white max-w-lg mx-auto sm:max-w-3xl py-4 px-6">
+        <h1 class="text-green-500 text-xl sm:text-2xl font-semibold text-center mb-4">
+            336Ah Lithium Battery 
+        </h1>
+
+        <!-- Carousel Container -->
+        <div class="w-full relative mt-2 sm:px-10">
+            <div class="swiper progress-slide-carousel swiper-container relative">
+                <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="rounded-2xl h-96 flex justify-center items-center overflow-hidden">
+                    <img src="{% static 'img/my panel.jpg' %}" alt="Slide 1" class="object-cover w-full h-full" />
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="rounded-2xl h-96 flex justify-center items-center overflow-hidden">
+                    <img src="{% static 'img/cctv adv.jpg' %}" alt="Slide 2" class="object-cover w-full h-full" />
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="rounded-2xl h-96 flex justify-center items-center overflow-hidden">
+                    <img src="{% static 'img/sol.jpg' %}" alt="Slide 3" class="object-cover w-full h-full" />
+                    </div>
+                </div>
+                </div>
+
+                <!-- Progressbar Pagination -->
+                <div class="swiper-pagination !bottom-2 !top-auto !w-80 right-0 mx-auto bg-gray-100"></div>
+            </div>
+        </div>
+
+        <!-- Description -->
+        <div class="pt-4 px-4">
+            <p class="text-sm text-gray-700 leading-relaxed">
+                The 336Ah battery system offers outstanding energy storage, providing up to 17.2kWh of capacity. With its modular design, it’s scalable to meet various power needs. Featuring high-quality LiFePO4 technology, it ensures reliability and safety. The long lifespan of over 6000 cycles at 80% DOD guarantees durability, making it ideal for both residential and industrial applications.
+            </p>
+        </div>
+
+        <!-- Responsive Table -->
+        <div class="overflow-x-auto mt-8">
+            <table class="min-w-full border border-gray-300 bg-white rounded-lg shadow-sm text-sm text-gray-700">
+                <thead class="bg-gray-100 border-b">
+                    <tr>
+                        <th class="px-4 py-2 text-left font-medium text-gray-700">Table 2-1: Product Specifications</th>
+                        <th class="px-4 py-2 text-left font-medium text-gray-700">SESSLB300A</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b">
+                        <td class="px-4 py-2 font-medium text-gray-900">Main Parameter</td>
+                        <td class="px-4 py-2"></td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Battery Chemistry</td>
+                        <td class="px-4 py-2">LiFePO4</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Capacity (Ah)</td>
+                        <td class="px-4 py-2">336</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Scalability</td>
+                        <td class="px-4 py-2">Max. 16 pcs pack in parallel</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Nominal Voltage (V)</td>
+                        <td class="px-4 py-2">51.2</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Operating Voltage (V)</td>
+                        <td class="px-4 py-2">43.2 ~ 57.6</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Energy (kWh)</td>
+                        <td class="px-4 py-2">17.2</td>
+                    </tr>
+
+
+                    <tr class="border-b">
+                        <td class="px-4 py-2 font-medium text-gray-900">Charge/Discharge</td>
+                        <td class="px-4 py-2"></td>
+                    </tr>
+
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Recommend<sup>[2]</sup></td>
+                        <td class="px-4 py-2">100</td>
+                    </tr>
+
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Max.<sup>[2]</sup></td>
+                        <td class="px-4 py-2">150</td>
+                    </tr>
+
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Recommend Depth of Discharge</td>
+                        <td class="px-4 py-2">90%</td>
+                    </tr>
+
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Master LED Indicator</td>
+                        <td class="px-4 py-2">5 LED (SOC: 20% ~ 100%)</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="px-4 py-2"></td>
+                        <td class="px-4 py-2">	3 LED (working, alarming, protecting)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</section>
+
+
+
+{%endblock%}
+ 

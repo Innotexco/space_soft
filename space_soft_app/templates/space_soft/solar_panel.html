@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+{% load static tailwind_tags %}
+
+{% block title %}Spacesoft | Solar Panel{% endblock %}
+
+{% block content %} 
+
+
+<!-- Solar System Panel -->
+<section class="px-4 mt-10 pt-[9em] sm:px-6 space-y-6">
+    <h1 data-aos="fade-down" data-aos-delay="100" class="text-gray-900 text-2xl font-semibold text-center">High-Efficiency Solar Panels for Sustainable Energy Solutions</h1>
+  
+    <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+      
+      <!-- 300W Solar Panel Card -->
+      <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col shadow-lg rounded-md shadow-neutral-500 bg-white p-4">
+        <h2 class="text-green-500 text-xl font-semibold text-center">300W Solar Panel</h2>
+        <div class="pt-3 flex justify-center">
+          <a href="{% url '300w' %}">
+            <img src="{% static 'img/bifacial_solar1.jpg' %}" class="w-full max-w-[350px] rounded-md object-contain" alt="300W Solar Panel">
+          </a>
+        </div>
+        <div class="pt-4 px-2 flex-1 flex flex-col">
+          <p class="text-sm text-gray-700 leading-relaxed">
+            The 300W solar panel is a high-efficiency photovoltaic solution ideal for residential and commercial installations. Designed with monocrystalline cells for maximum performance, it ensures optimal energy output even in low-light conditions. Built with durable materials and advanced encapsulation, it offers long-lasting power generation and minimal maintenance.
+          </p>
+          <ul class="list-disc ml-4 mt-3 text-sm text-gray-700">
+            <li><strong>Model:</strong> SP-300M</li>
+            <li><strong>Rated Power:</strong> 300 Watts</li>
+            <li><strong>Cell Type:</strong> Half-Cut Monocrystalline, Bifacial</li>
+            <li><strong>Efficiency:</strong> ≥ 25.3%</li>
+            <li><strong>Dimensions:</strong> 1640mm × 992mm × 35mm</li>
+            <li><strong>Warranty:</strong> 15 Years Product Warranty / 25 Years Performance</li>
+            <li><strong>Application:</strong> Home, Business, Off-Grid, and Hybrid Systems</li>
+          </ul>
+          <div class="pt-6 text-center mt-auto">
+            <a href="{% url '300w' %}">
+              <button class="px-4 py-2 bg-green-500 shadow-md shadow-gray-700 text-white hover:bg-green-600 text-sm rounded">
+                Read More
+              </button>
+            </a>
+          </div>
+        </div>
+    </div>
+
+      <!-- 450W Solar Panel Card -->
+    <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col shadow-lg rounded-md shadow-neutral-500 bg-white p-4">
+        <h2 class="text-green-500 text-xl font-semibold text-center">450W Solar Panel</h2>
+        <div class="pt-3 flex justify-center">
+        <a href="{% url '450w' %}">
+            <img src="{% static 'img/bifacial_solar1.jpg' %}" class="w-full max-w-[350px] rounded-md object-contain" alt="450W Solar Panel">
+        </a>
+        </div>
+        <div class="pt-4 px-2 flex-1 flex flex-col">
+        <p class="text-sm text-gray-700 leading-relaxed">
+            The 450W solar panel delivers high power output for demanding energy needs, making it perfect for large residential systems and commercial-scale installations. With advanced half-cut monocrystalline cells and anti-reflective tempered glass, it maximizes energy absorption while offering superior durability and weather resistance.
+        </p>
+        <ul class="list-disc ml-4 mt-3 text-sm text-gray-700">
+            <li><strong>Model:</strong> SP-450M</li>
+            <li><strong>Rated Power:</strong> 450 Watts</li>
+            <li><strong>Cell Type:</strong> Half-Cut Monocrystalline, Bifacial</li>
+            <li><strong>Efficiency:</strong> ≥ 25.3%</li>
+            <li><strong>Dimensions:</strong> 1900mm × 1130mm × 35mm</li>
+            <li><strong>Warranty:</strong> 15 Years Product Warranty / 25 Years Linear Performance</li>
+            <li><strong>Application:</strong> Residential, Commercial, Utility-Scale Projects</li>
+        </ul>
+        <div class="pt-6 text-center mt-auto">
+            <a href="{% url '450w' %}">
+            <button class="px-4 py-2 bg-green-500 shadow-md shadow-gray-700 text-white hover:bg-green-600 text-sm rounded">
+                Read More
+            </button>
+            </a>
+        </div>
+        </div>
+    </div>
+
+
+        <!-- 550W Solar Panel Card -->
+    <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col shadow-lg rounded-md shadow-neutral-500 bg-white p-4">
+        <h2 class="text-green-500 text-xl font-semibold text-center">550W Solar Panel</h2>
+        <div class="pt-3 flex justify-center">
+        <a href="{% url '550w' %}">
+            <img src="{% static 'img/bifacial_solar1.jpg' %}" class="w-full max-w-[350px] rounded-md object-contain" alt="550W Solar Panel">
+        </a>
+        </div>
+        <div class="pt-4 px-2 flex-1 flex flex-col">
+        <p class="text-sm text-gray-700 leading-relaxed">
+            The 550W solar panel is a high-efficiency, next-generation panel engineered for large-scale solar installations and off-grid systems. Designed with multi-busbar technology and bifacial capabilities, it provides excellent performance in low-light conditions and maximizes energy yield throughout the day.
+        </p>
+        <ul class="list-disc ml-4 mt-3 text-sm text-gray-700">
+            <li><strong>Model:</strong> SP-550MB</li>
+            <li><strong>Rated Power:</strong> 550 Watts</li>
+            <li><strong>Cell Type:</strong> Half-Cut Monocrystalline, Bifacial</li>
+            <li><strong>Module Efficiency:</strong> ≥ 25.3%</li>
+            <li><strong>Dimensions:</strong> 2279mm × 1134mm × 35mm</li>
+            <li><strong>Warranty:</strong> 15 Years Product Warranty / 30 Years Power Output</li>
+            <li><strong>Application:</strong> Utility, Commercial Rooftop, Industrial</li>
+        </ul>
+        <div class="pt-6 text-center mt-auto">
+            <a href="{% url '550w' %}">
+            <button class="px-4 py-2 bg-green-500 shadow-md shadow-gray-700 text-white hover:bg-green-600 text-sm rounded">
+                Read More
+            </button>
+            </a>
+        </div>
+        </div>
+    </div>
+
+
+        <!-- 650W Solar Panel Card -->
+    <div data-aos="fade-up" data-aos-delay="400" class="flex flex-col shadow-lg rounded-md shadow-neutral-500 bg-white p-4">
+        <h2 class="text-green-500 text-xl font-semibold text-center">650W Solar Panel</h2>
+        <div class="pt-3 flex justify-center">
+        <a href="{% url '650w' %}">
+            <img src="{% static 'img/bifacial_solar1.jpg' %}" class="w-full max-w-[350px] rounded-md object-contain" alt="650W Solar Panel">
+        </a>
+        </div>
+        <div class="pt-4 px-2 flex-1 flex flex-col">
+        <p class="text-sm text-gray-700 leading-relaxed">
+            The 650W solar panel is designed for maximum power output, ideal for large-scale solar energy projects. Built with cutting-edge half-cut cell technology and enhanced anti-reflective coatings, it delivers exceptional performance, durability, and energy yield—even in low-light environments.
+        </p>
+        <ul class="list-disc ml-4 mt-3 text-sm text-gray-700">
+            <li><strong>Model:</strong> SP-650HC</li>
+            <li><strong>Rated Power:</strong> 650 Watts</li>
+            <li><strong>Cell Type:</strong> Half-Cut Monocrystalline, Bifacial</li>
+            <li><strong>Module Efficiency:</strong> ≥ 25.3%</li>
+            <li><strong>Dimensions:</strong> 2384mm × 1303mm × 35mm</li>
+            <li><strong>Warranty:</strong> 15 Years Product Warranty / 30 Years Power Output</li>
+            <li><strong>Application:</strong> Commercial, Utility-Scale Installations</li>
+        </ul>
+        <div class="pt-6 text-center mt-auto">
+            <a href="{% url '650w' %}">
+            <button class="px-4 py-2 bg-green-500 shadow-md shadow-gray-700 text-white hover:bg-green-600 text-sm rounded">
+                Read More
+            </button>
+            </a>
+        </div>
+        </div>
+    </div>
+  
+  
+  
+  
+    </div>
+</section>
+
+{%endblock%}
+ 

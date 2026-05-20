@@ -1,0 +1,495 @@
+{% extends "base.html" %}
+{% load static tailwind_tags %}
+
+{% block title %}Spacesoft | Software development{% endblock %}
+
+<!-- https://msmeafricaonline.com/call-for-applications-retti-x-wave-solar-panel-installation-and-employability-training-program-2024/ -->
+
+{% block content %} 
+<!-- Career Development Section -->
+<section class="grid grid-cols-1 gap-10 pt-[9em] mb-10 px-5 md:px-10 lg:px-32 xl:px-64 text-center items-center bg-gray-50">
+
+  <!-- 
+
+    internship for the best 12 student 2 from each
+    Access to Information on Distributorship
+    How to Start your own Solar Business plus continuous engineering support from our lead engineer and instructor
+    Beneficiaries start their own solar businesses
+    Beneficiaries will use certificates as proof of training to gain employment with solar companies
+
+   -->
+
+  <!-- Section Title -->
+  <div>
+    <h1 class="text-4xl font-bold text-gray-900 mb-3" data-aos="flip-up">Career Development</h1>
+    <p class="text-justify text-lg text-gray-600 mx-auto" data-aos="fade-up" data-aos-delay="50">
+      Build the future with skills that matter. At <strong>Spacesoft</strong>,  we believe in the power of knowledge and innovation. Our Career Development Program is designed to equip aspiring professionals with in-demand tech and technical skills to thrive in today’s competitive landscape.
+    </p>
+    <p class=" text-justify text-lg text-gray-600 mx-auto mt-2" data-aos="fade-up" data-aos-delay="50">
+      Whether you're just starting your journey or looking to upgrade your skills, our hands-on, industry-relevant training courses will prepare you for real-world opportunities in the tech and energy sectors.
+    </p>
+  </div>
+
+  <!-- BENEFITS SECTION -->
+  <div class="my-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-black" data-aos="fade-up">What You'll Gain</h2>
+      <hr class="my-5">
+      <p class="text-lg text-gray-600 mt-2 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Our Career Development Program offers more than just skill acquisition — it's a launchpad for your career in tech, energy, and innovation. Here's what sets it apart:
+      </p>
+    </div>
+
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Benefit 1: Internship Opportunity -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-green-700 text-4xl mb-4">
+          <i class="bi bi-award-fill"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Internship Placements</h3>
+        <p class="text-gray-600 text-lg">
+          Top-performing students will be selected for internship roles in tech companies, energy firms, and partner organizations.
+        </p>
+      </div>
+
+      <!-- Benefit 2: Project-Based Learning -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="150">
+        <div class="text-green-700 text-4xl mb-4">
+          <i class="bi bi-file-code-fill"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Real-World Projects</h3>
+        <p class="text-gray-600 text-lg">
+          Build a strong portfolio with practical projects in web development, UI/UX, iOS apps, electronics circuits, and solar installation.
+        </p>
+      </div>
+
+      <!-- Benefit 3: Distributorship Access -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+        <div class="text-green-700 text-4xl mb-4">
+          <i class="bi bi-briefcase-fill"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Tech & Solar Distributorship</h3>
+        <p class="text-gray-600 text-lg">
+          Gain access to distributorship and partnership opportunities in software solutions, gadgets, solar panels, and electrical components.
+        </p>
+      </div>
+
+      <!-- Benefit 4: Entrepreneurship Support -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="250">
+        <div class="text-green-700 text-4xl mb-4">
+          <i class="bi bi-rocket-takeoff-fill"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Startup Mentorship</h3>
+        <p class="text-gray-600 text-lg">
+          Learn how to build and scale your own tech or solar-based business with ongoing guidance from experienced professionals.
+        </p>
+      </div>
+
+      <!-- Benefit 5: Certification -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="300">
+        <div class="text-green-700 text-4xl mb-4">
+          <i class="bi bi-patch-check-fill"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Recognized Certification</h3>
+        <p class="text-gray-600 text-lg">
+          Receive an industry-recognized certificate in your chosen track — a valuable asset for jobs, contracts, and career advancement.
+        </p>
+      </div>
+
+      <!-- Benefit 6: Community & Support -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="350">
+        <div class="text-green-700 text-4xl mb-4">
+          <i class="bi bi-people-fill"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Lifelong Community</h3>
+        <p class="text-gray-600 text-lg">
+          Join a growing community of innovators, developers, and entrepreneurs. Get support, collaborate, and access ongoing updates and tools.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  
+  <div>
+    <h1 class="text-4xl font-bold text-gray-900" data-aos="flip-up">Our Courses</h1>
+    <hr class="my-5">
+      <!-- Filter Buttons -->
+    <div class="flex justify-center flex-wrap gap-2 mt-2 mb-10">
+      <button onclick="filterCourses('all')" class="filter-btn bg-green-600 text-white hover:text-gray-500 px-5 py-2 rounded-lg hover:bg-green-100 transition">All</button>  <p class="text-3xl">|</p>
+      <button onclick="filterCourses('software')" class="filter-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-lg hover:bg-green-100 transition">Software Development</button> <p class="text-3xl">|</p>
+      <button onclick="filterCourses('solar')" class="filter-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-lg hover:bg-green-100 transition">Solar Installation</button><p class="text-3xl">|</p>
+      <button onclick="filterCourses('elect')" class="filter-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-lg hover:bg-green-100 transition">Electronics</button>
+    </div>
+  
+    <!-- Your software dev content -->
+    <div data-category="software" class="course-block">
+      <h1 
+      data-aos="fade-zoom-in" 
+      date-aos-delay="100" 
+      class=" text-3xl font-bold text-center mb-2">Software Development</h1>
+      <p class="italic text-center text-lg text-gray-600 max-w-3xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="80">
+        “Software development is not just about writing code. It’s about solving real-world problems, improving lives, and building the future—one line at a time.”
+      </p>
+      <div class="grid gap-8 md:grid-cols-2">
+        
+        <!-- Website Development -->
+        <div class="bg-white shadow-lg rounded-md shadow-neutral-300 grid grid-cols-1 gap-6 p-6 md:p-8 mb-10" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex justify-center items-center">
+            <div class="text-green-700 text-[4rem]">
+              <i class="bi bi-laptop-fill"></i>
+            </div>
+          </div>
+          <div class="text-start flex flex-col justify-center">
+            <h3 class="text-xl font-semibold mb-2 text-green-600">Website Development</h3>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              Learn to create dynamic and secure web applications using Django, a powerful Python framework. This course covers frontend integration, backend logic, databases, and deployment essentials.
+            </p>
+            <ul class="list-disc list-inside text-gray-700 text-lg mt-4 space-y-1">
+              <li>Mentorship</li>
+              <li>Hands-on Python projects</li>
+              <li>Frontend integration (HTML, CSS, JS, Tailwind, React JS)</li>
+              <li>Backend (Postgres, MySQL, Django, PHP, Laravel)</li>
+              <li>Deployment & version control</li>
+            </ul>
+  
+            <!-- Projects -->
+            <div class="mt-6">
+              <button onclick="toggleProjects(this)" class="text-green-600 font-semibold text-xl flex items-center gap-2 hover:underline">
+                🛠️ Projects You'll Build
+                <i class="bi bi-chevron-down transition-transform duration-300"></i>
+              </button>
+              <ul class="project-list hidden list-disc list-inside text-gray-700 text-lg space-y-1 mt-2">
+                <li>Personal Portfolio Website</li>
+                <li>Blog with Admin Dashboard</li>
+                <li>E-commerce Site with Cart System</li>
+              </ul>
+            </div>
+  
+            <!-- Price -->
+            <div class="mt-4 text-xl font-bold text-green-700">
+              💰 On-site Price: <span class="line-through text-gray-400">₦1,700,000</span>   ₦850,000
+            </div>
+            <!-- Price -->
+            <div class="mt-4 text-xl font-bold text-green-700">
+              💰 Online Price: <span class="line-through text-gray-400">₦850,000</span>   ₦425,000
+            </div>
+            <a href="{% url 'course' %}?course=web" class="mt-6  bg-green-600 text-xl font-bold text-white text-center py-3 rounded-lg hover:bg-green-700 transition">Enroll Now</a>
+          </div>
+        </div>
+        
+        <!-- UI/UX Development -->
+        <div class="bg-white shadow-lg rounded-md shadow-neutral-300 grid grid-cols-1 gap-6 p-6 md:p-8 mb-10" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex justify-center items-center">
+            <div class="text-green-700 text-[4rem]">
+              <i class="bi bi-grid-1x2-fill"></i>
+            </div>
+          </div>
+          <div class="text-start flex flex-col justify-center">
+            <h3 class="text-xl font-semibold mb-2 text-green-600">UI/UX Design</h3>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              Learn to design intuitive, user-centered digital experiences using industry-standard tools like Figma. This course prepare you to create clean, modern interfaces that enhance product engagement.
+            </p>
+            <ul class="list-disc list-inside text-gray-700 text-lg mt-4 space-y-1">
+              <li>Mentorship</li>
+              <li>User-centered design approach</li>
+              <li>Responsive design</li>
+              <li>Usability testing and design iteration</li>
+              <li>High-fidelity UI design using Figma</li>
+            </ul>
+  
+            <!-- Projects -->
+            <div class="mt-6">
+              <button onclick="toggleProjects(this)" class="text-green-600 font-semibold text-xl flex items-center gap-2 hover:underline">
+                🛠️ Projects You'll Build
+                <i class="bi bi-chevron-down transition-transform duration-300"></i>
+              </button>
+              <ul class="project-list hidden list-disc list-inside text-gray-700 text-lg space-y-1 mt-2">
+                <li>App Wireframes(Figma)</li>
+                <li>Responsive Web Mockups</li>
+                <li>Design System for a Mobile App</li>
+              </ul>
+            </div>
+  
+            <!-- Price -->
+            <div class="mt-4 text-xl font-bold text-green-700">
+              💰 On-site Price: <span class="line-through text-gray-400">₦850,000</span>   ₦425,000
+            </div>
+            <!-- Price -->
+            <div class="mt-4 text-xl font-bold text-green-700">
+              💰 Online Price: <span class="line-through text-gray-400">₦425,000</span>   ₦212,000
+            </div>
+            <a href="{% url 'course' %}?course=design" class="mt-6  bg-green-600 text-xl font-bold text-white text-center py-3 rounded-lg hover:bg-green-700 transition">Enroll Now</a>
+          </div>
+        </div>
+  
+        <!-- Android Development -->
+        <div class="bg-white shadow-lg rounded-md shadow-neutral-300 grid grid-cols-1 gap-6 p-6 md:p-8 mb-10" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex justify-center items-center">
+            <div class="text-green-700 text-[4rem]">
+              <i class="bi bi-android2"></i>
+            </div>
+          </div>
+          <div class="text-start flex flex-col justify-center">
+            <h3 class="text-xl font-semibold mb-2 text-green-600">Android Mobile Development</h3>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              Master Android development with Kotlin and Jetpack Compose. Build powerful, native mobile applications with modern UI and responsive features.
+            </p>
+            <ul class="list-disc list-inside text-gray-700 text-lg mt-4 space-y-2">
+              <li>Mentorship</li>
+              <li>Jetpack Compose UI design</li>
+              <li>Kotlin programming </li>
+              <li>Integration with APIs and local storage</li>
+              <li>Publishing to Google Play Store</li>
+            </ul>
+            
+  
+            <!-- Projects -->
+            <div class="mt-6">
+              <button onclick="toggleProjects(this)" class="text-green-600 font-semibold text-xl flex items-center gap-2 hover:underline">
+                🛠️ Projects You'll Build
+                <i class="bi bi-chevron-down transition-transform duration-300"></i>
+              </button>
+              <ul class="project-list hidden list-disc list-inside text-gray-700 text-lg space-y-1 mt-2">
+                <li>Banking App UI with jetpack compose</li>
+                <li>Weather app with API</li>
+                <li>News App</li>
+              </ul>
+            </div>
+  
+            <!-- Price -->
+            <div class="mt-4 text-xl font-bold text-green-700">
+              💰 On-site Price: <span class="line-through text-gray-400">₦1,700,000</span>   ₦850,000
+            </div>
+  
+            <!-- Price -->
+            <div class="mt-4 text-xl font-bold text-green-700">
+              💰 Online Price: <span class="line-through text-gray-400">₦850,000</span>   ₦425,000
+            </div>
+  
+            <a href="{% url 'course' %}?course=android" class="mt-6  bg-green-600 text-xl font-bold text-white text-center py-3 rounded-lg hover:bg-green-700 transition">Enroll Now</a>
+          </div>
+        </div>
+        
+        <!-- IOS Development -->
+        <div class="bg-white shadow-lg rounded-md shadow-neutral-300 grid grid-cols-1 gap-6 p-6 md:p-8 mb-10" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex justify-center items-center">
+            <div class="text-green-700 text-[4rem]">
+              <i class="bi bi-apple"></i>
+            </div>
+          </div>
+          <div class="text-start flex flex-col justify-center">
+            <h3 class="text-xl font-semibold mb-2 text-green-600">IOS Mobile Development</h3>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              Master IOS development with Swift. Build powerful, native mobile applications with modern UI and responsive features.
+            </p>
+            <ul class="list-disc list-inside text-gray-700 text-lg mt-4 space-y-2">
+              <li>Mentorship</li>
+              <li>Swift programming </li>
+              <li>Integration with APIs and local storage</li>
+              <li>Publishing to Apple Store</li>
+            </ul>
+            
+  
+            <!-- Projects -->
+            <div class="mt-6">
+              <button onclick="toggleProjects(this)" class="text-green-600 font-semibold text-xl flex items-center gap-2 hover:underline">
+                🛠️ Projects You'll Build
+                <i class="bi bi-chevron-down transition-transform duration-300"></i>
+              </button>
+              <ul class="project-list hidden list-disc list-inside text-gray-700 text-lg space-y-1 mt-2">
+                <li>Banking App UI with SwiftUI</li>
+                <li>Weather app with API</li>
+                <li>News App</li>
+              </ul>
+            </div>
+  
+            <!-- Price -->
+            <div class="mt-4 text-xl font-bold text-green-700">
+              💰 On-site Price: <span class="line-through text-gray-400">₦1,700,000</span>   ₦850,000
+            </div>
+  
+            <!-- Price -->
+            <div class="mt-4 text-xl font-bold text-green-700">
+              💰 Online Price: <span class="line-through text-gray-400">₦850,000</span>   ₦425,000
+            </div>
+  
+            <a href="{% url 'course' %}?course=IOS" class="mt-6  bg-green-600 text-xl font-bold text-white text-center py-3 rounded-lg hover:bg-green-700 transition">Enroll Now</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  
+  
+    <!-- SOLAR INSTALLATION BLOCK -->
+    <div data-category="solar" class="course-block">
+      <h1 data-aos="fade-zoom-in" date-aos-delay="100" 
+       class=" text-3xl font-bold text-center mb-2"  >Solar Installation</h1>
+      <p class="italic text-center text-lg text-gray-600 max-w-3xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="100">
+        “In a world powered by innovation, clean energy isn't a luxury—it's a necessity. Mastering solar installation means becoming a part of the global solution.”
+      </p>
+    
+      <div class="bg-white shadow-lg rounded-md shadow-neutral-300 grid grid-cols-1 gap-6 p-6 md:p-8 mb-5" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex justify-center items-center">
+          <div class="text-green-700 text-[4rem]">
+            <i class="bi bi-sun-fill"></i>
+          </div>
+        </div>
+        <div class="text-start flex flex-col justify-center">
+          <h3 class="text-xl font-semibold mb-2 text-green-600">Solar Installation & Energy Systems</h3>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Equip yourself with practical skills to design and install sustainable solar power systems. Learn about energy auditing, configuration, installation, and maintenance.
+          </p>
+          <ul class="list-disc list-inside text-gray-700 text-lg mt-4 space-y-2">
+            <li>Mentorship</li>
+            <li>Basic Electricity</li>
+            <li>Renewable Energy</li>
+            <li>Solar system planning & sizing</li>
+            <li>Safety & compliance training</li>
+            <li>Offgrid and ongrid solar system </li>
+            <li>Commisioning</li>
+          </ul>
+  
+  
+          <!-- Projects -->
+          <div class="mt-6">
+            <button onclick="toggleProjects(this)" class="text-green-600 font-semibold text-xl flex items-center gap-2 hover:underline">
+              🛠️ Projects You'll Build
+              <i class="bi bi-chevron-down transition-transform duration-300"></i>
+            </button>
+            <ul class="project-list hidden list-disc list-inside text-gray-700 text-lg space-y-1 mt-2">
+              <li>Panel Connection</li>
+              <li>Battery Connection</li>
+              <li>Battery-inverter wiring</li>
+            </ul>
+          </div>
+  
+          <!-- Price -->
+          <div class="mt-4 text-xl font-bold text-green-700">
+            💰 On-site Price: <span class="line-through text-gray-400">₦1,100,000</span> ₦550,000
+          </div>
+  
+          <a href="{% url 'course' %}?course=solar" class="mt-6  bg-green-600 text-xl font-bold text-white text-center py-3 rounded-lg hover:bg-green-700 transition">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Electronics Block -->
+    <div data-category="elect" class="course-block">
+      <!-- ELECTRONICS BLOCK -->
+      <div>
+        <h1 data-aos="fade-zoom-in" date-aos-delay="100" 
+        class=" text-3xl font-bold text-center mb-2">Electronics</h1>
+        <p class="italic text-center text-lg text-gray-600 max-w-3xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="220">
+        “Electronics is the foundation of modern innovation—from smart devices to intelligent systems. Learn to build and troubleshoot the tech powering our world.”
+        </p>
+      
+        <div class="bg-white shadow-lg rounded-md shadow-neutral-300 grid grid-cols-1 gap-6 p-6 md:p-8" data-aos="fade-up" data-aos-delay="250">
+          <div class="flex justify-center items-center">
+            <div class="text-green-700 text-[4rem]">
+              <i class="bi bi-motherboard-fill"></i>
+            </div>
+          </div>
+  
+          <div class="text-start flex flex-col justify-center">
+            <h3 class="text-xl font-semibold mb-2 text-green-600">Practical Electronics & Circuit Design</h3>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              Get hands-on experience with electronic components, circuits, and systems. This course teaches core principles of electricity and electronics—ideal for aspiring engineers and technicians.
+            </p>
+            <ul class="list-disc list-inside text-gray-700 text-lg mt-4 space-y-2">
+              <li>Mentorship</li>
+              <li>Basic circuit theory and Ohm’s law</li>
+              <li>Basic electrical formulars</li>
+              <li>Basic electrical components</li>
+              <li>Circuit analysis</li>
+              <li>Oscillating circuit</li>
+              <li>Full-bridge rectifier</li>
+            </ul>
+  
+            <!-- Projects -->
+            <div class="mt-6">
+              <button onclick="toggleProjects(this)" class="text-green-600 font-semibold text-xl flex items-center gap-2 hover:underline">
+                🛠️ Projects You'll Build
+                <i class="bi bi-chevron-down transition-transform duration-300"></i>
+              </button>
+              <ul class="project-list hidden list-disc list-inside text-gray-700 text-lg space-y-1 mt-2">
+                <li>Using of Multimeter</li>
+                <li>Building of Phone Charger</li>
+                <li>Building of Inverter</li>
+              </ul>
+            </div>
+  
+            <!-- Price -->
+            <div class="mt-4 text-xl font-bold text-green-700">
+              💰 On-site Price: <span class="line-through text-gray-400">₦3,000,000</span> ₦1,500,000
+            </div>
+  
+  
+            <a href="{% url 'course' %}?course=elect" class="mt-6  bg-green-600 text-xl font-bold text-white text-center py-3 rounded-lg hover:bg-green-700 transition">Enroll Now</a>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- CTA SECTION -->
+  <div data-aos="fade-zoom-in" date-aos-delay="100"  class="bg-green-600 text-white text-center p-10 rounded-md shadow-lg mt-16">
+    <h3 class="text-3xl font-bold mb-4">Start Your Journey With Us</h3>
+    <p class="mb-6 text-lg max-w-2xl mx-auto">
+      Unlock your potential with industry-relevant skills and hands-on experience. Join our training programs in software development, solar installation, and electronics today.
+    </p>
+    <a href="{% url 'course' %}" class="inline-block bg-white text-green-600 font-semibold px-6 py-3 rounded-full hover:bg-green-100 transition">Enroll Now</a>
+  </div>
+
+</section>
+
+<script>
+
+  function toggleProjects(button) {
+    const icon = button.querySelector('i');
+    const list = button.nextElementSibling;
+    list.classList.toggle('hidden');
+    icon.classList.toggle('rotate-180');
+  }
+
+  function filterCourses(category) {
+    const blocks = document.querySelectorAll('.course-block');
+    blocks.forEach(block => {
+      if (category === 'all' || block.dataset.category === category) {
+        AOS.refresh()
+        console.log(category);
+        block.classList.remove('hidden');
+      } else {
+        console.log(category);
+        AOS.refresh()
+        block.classList.add('hidden');
+      }
+    });
+    
+    // Update active button styling
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      AOS.refresh()
+      btn.classList.remove('bg-green-600', 'text-white');
+      btn.classList.add('bg-gray-200', 'text-gray-700');
+    });
+
+    const activeBtn = Array.from(document.querySelectorAll('.filter-btn')).find(btn => btn.innerText.toLowerCase().includes(category));
+    if (activeBtn) {
+      activeBtn.classList.add('bg-green-600', 'text-white', "hover:text-green-500");
+      activeBtn.classList.remove('bg-gray-200', 'text-gray-700');
+    } else {
+      document.querySelectorAll('.filter-btn')[0].classList.add('bg-green-600', 'text-white', 'hover:text-gray-500');
+    }
+  }
+
+
+
+</script>
+
+
+
+{% endblock %}

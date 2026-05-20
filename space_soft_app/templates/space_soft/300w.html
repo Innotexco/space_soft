@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% load static tailwind_tags %}
+
+{% block title %}300W Panel{% endblock %}
+
+{% block content %} 
+
+
+<section class="pt-[9em] p-4">
+    <!-- 300W Solar Panel -->
+    <div class="shadow-lg rounded-md shadow-neutral-500 bg-white max-w-lg mx-auto sm:max-w-3xl py-4 px-6">
+        <h1 class="text-green-500 text-xl sm:text-2xl font-semibold text-center mb-4">
+            300W Solar Panel
+        </h1>
+
+        <!-- Carousel Container -->
+        <div class="w-full relative mt-2 sm:px-10">
+            <div class="swiper progress-slide-carousel swiper-container relative">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="rounded-2xl h-96 flex justify-center items-center overflow-hidden">
+                            <img src="{% static 'img/bifacial_solar1.jpg' %}" alt="Slide 1" class="object-contain w-full h-full" />
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="rounded-2xl h-96 flex justify-center items-center overflow-hidden">
+                            <img src="{% static 'img/bifacial_solar.jpg' %}" alt="Slide 2" class="object-contain w-full h-full" />
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="rounded-2xl h-96 flex justify-center items-center overflow-hidden">
+                            <img src="{% static 'img/solar 2.jpg' %}" alt="Slide 3" class="object-contain w-full h-full" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progressbar Pagination -->
+                <div class="swiper-pagination !bottom-2 !top-auto !w-80 right-0 mx-auto bg-gray-100"></div>
+            </div>
+        </div>
+
+        <!-- Description -->
+        <div class="pt-4 px-4">
+            <p class="text-sm text-gray-700 leading-relaxed">
+                The 300W solar panel is designed to deliver high-efficiency power output for residential and commercial use. Built with advanced monocrystalline technology, it offers excellent performance even in low-light conditions. The panel is ideal for off-grid and grid-tied applications, and it’s constructed with durable materials that resist harsh weather, ensuring long-term reliability and energy savings.
+            </p>
+        </div>
+
+        <!-- Responsive Table -->
+        <div class="overflow-x-auto mt-8">
+            <table class="min-w-full border border-gray-300 bg-white rounded-lg shadow-sm text-sm text-gray-700">
+                <thead class="bg-gray-100 border-b">
+                    <tr>
+                        <th class="px-4 py-2 text-left font-medium text-gray-700">Table 2-1: Product Specifications</th>
+                        <th class="px-4 py-2 text-left font-medium text-gray-700">Model: SP300M</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b">
+                        <td class="px-4 py-2 font-medium text-gray-900">Electrical Characteristics</td>
+                        <td class="px-4 py-2"></td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Rated Power (Pmax)</td>
+                        <td class="px-4 py-2">300W</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Open Circuit Voltage (Voc)</td>
+                        <td class="px-4 py-2">40.2V</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Short Circuit Current (Isc)</td>
+                        <td class="px-4 py-2">9.50A</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Max Power Voltage (Vmp)</td>
+                        <td class="px-4 py-2">33.5V</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Max Power Current (Imp)</td>
+                        <td class="px-4 py-2">8.96A</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Module Efficiency</td>
+                        <td class="px-4 py-2">18.5%</td>
+                    </tr>
+
+                    <tr class="border-b">
+                        <td class="px-4 py-2 font-medium text-gray-900">Mechanical Data</td>
+                        <td class="px-4 py-2"></td>
+                    </tr>
+
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Dimensions</td>
+                        <td class="px-4 py-2">1640 x 992 x 35 mm</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Weight</td>
+                        <td class="px-4 py-2">18.5 kg</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Frame</td>
+                        <td class="px-4 py-2">Anodized Aluminum Alloy</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Glass</td>
+                        <td class="px-4 py-2">3.2mm Tempered Glass</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="px-4 py-2">Connector</td>
+                        <td class="px-4 py-2">MC4 Compatible</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+{%endblock%}
+ 

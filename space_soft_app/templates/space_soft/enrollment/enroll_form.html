@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+{% load static tailwind_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store" />
+
+    <link rel="stylesheet" href="{% static 'css/spacesoft.css' %}">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="{% static 'css/icons/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+
+    <!-- AOS CSS Scroll animation -->  
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+    <script src="{% static 'js/aos.js' %}"></script>
+
+    <title>Register</title>
+    <script src="{% static 'js/sweetalert2.all.min.js' %}"></script>
+    <script src="{% static 'js/flowbite.js' %}"></script>
+</head>
+<body class="bg-slate-100">
+    <script>
+        window.addEventListener('load', function () {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: true,
+                disable: 'mobile'
+            });
+        });
+    </script>
+ 
+    <header class=" fixed z-50 left-0 right-0 top-0 shadow-lg">
+        <!-- FIRST NAV BAR -->
+        <nav class=" bg-slate-100 px-3  py-2 flex justify-between items-center text-center">
+            <div class="flex justify-center items-center" data-aos="fade-right" data-aos-duration="800">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'img/logo1.png' %}" class="w-[100px] max-w-full h-auto md:w-[150px] sm:w-[120px]" alt="Responsive Logo">
+                </a>
+            </div>        
+
+            <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="200" class="">
+                <ul class=" group justify-center items-center text-center flex gap-10">
+                    <li class=" flex gap-2 items-center hover:text-green-700">
+                        <a 
+                        href="https://wa.me/2349024433383" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        class=" flex gap-2 items-center hover:text-green-700"
+                        >
+                            <span class=" ">
+                                <i class="bi bi-whatsapp text-black hover:text-green-700 text-2xl"></i>
+                            </span>
+                            <article class=" hidden md:block lg:block">
+                                <h4>+(234) 9024433383</h4>
+                            </article>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a 
+                        href="mailto:info@spacesoftintegrals.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="flex gap-2 items-center hover:text-green-700">
+                            <span class=" ">
+                                <i class="bi bi-envelope-at text-black hover:text-green-700 text-2xl"></i>
+                            </span>
+                            <article  class=" hidden md:block lg:block">
+                                <h4>info@spacesoftintegrals.com</h4>
+                            </article>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>    
+    
+
+    </header>
+
+
+
+    
+    {% if messages %}
+        {% for message in messages %}
+            <script>
+                var tag = "{{message.tags}}"
+                Swal.fire({
+                    icon: tag,
+                    title: "{{message|capfirst}}",
+                    timer: 5000,
+                    timerProgressBar: true,
+                    showConfirmButton: false,
+                    showCloseButton: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                })
+                
+            </script>
+        {% endfor %}
+    {% endif %}
+
+    <!-- Course Enrollment -->
+    <section class="bg-gray-100 pt-[9em] py-12 px-4 flex justify-center" data-aos="fade-up">
+        <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-lg" data-aos="zoom-in" data-aos-delay="100">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8" data-aos="fade-down">
+                Course Enrollment
+            </h2>
+            
+            <form id="bioForm" method="POST" action="">
+                {% csrf_token %}
+        
+                <!-- Progress Bar -->
+                <div class="w-full bg-gray-200 rounded-full h-3 mb-8">
+                    <div id="progressBar" class="bg-green-500 h-3 rounded-full transition-all duration-300 ease-in-out" style="width: 33%;"></div>
+                </div>
+        
+                <!-- Step 1: Personal Info -->
+                <div class="form-step">
+                    <h3 class="text-xl font-semibold mb-4 text-green-700">Personal Information</h3>
+    
+                    <!-- Full Name Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="full_name" class="block text-sm font-medium text-gray-700 mb-1">Full Name </label>
+                        <input type="text" id="full_name" name="full_name" placeholder="Your Full name"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm form-input" required>
+                    </div>
+                    
+                    <!-- Gender Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="gender" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Gender </label>
+                        <select name="gender" id="gender"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm bg-transparent form-input" required>
+                            <option value="">-- Select Gender --</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+    
+                    <!-- DOB Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="dob" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Date of Birth </label>
+                        <input type="date" id="dob" name="dob" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm " required>
+                    </div>
+    
+                    <!-- Nationality Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="country" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Nationality </label>
+                        <input type="text" id="country" name="nationality" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm" placeholder="Your Country" required>
+                    </div>
+                    
+                    <!-- Marital Status Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="status" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Marital Status </label>
+                        <select id="status" name="marital_status" 
+                        class="form-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm bg-transparent" required>
+                            <option value="">-- Select Status --</option>
+                            <option value="Single">Single</option>
+                            <option value="Married">Married</option>
+                        </select>
+                    </div>
+                
+                    <!-- State of Origin Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="state" class="mt-4 block text-sm font-medium text-gray-700 mb-1">State of Origin </label>
+                        <input type="text" id="state" name="state" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm" placeholder="Your State" required>
+                    </div>
+                
+                    <!-- LGA Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="lga" class="mt-4 block text-sm font-medium text-gray-700 mb-1">LGA</label>
+                        <input type="text" id="lga" name="lga" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm" placeholder="Your Local Govt Area">
+                    </div>
+                
+                    <!-- Religion Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="religion" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Religion</label>
+                        <input type="text" id="religion" name="religion" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm" placeholder="Your Religion">
+                    </div>
+                </div>
+                
+                <!-- Step 2: Contact Info -->
+                <div class="form-step">
+                    <h3 class="text-xl font-semibold mb-4 text-green-700">Contact Information</h3>
+                
+                    <!-- Phone Number Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="phone" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Phone Number </label>
+                        <input type="text" id="phone" name="phone" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm" placeholder="Your active mobile number" required>
+                    </div>
+                
+                    <!-- Email Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="email" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Email </label>
+                        <input type="email" id="email" name="email" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm" placeholder="you@example.com" required>
+                    </div>
+                
+                    <!-- Residential Address Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="address" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Residential Address </label>
+                        <input type="text" id="address" name="address" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm" placeholder="Complete Residental Adress" required>
+                    </div>
+                    
+                    <h4 class="text-xl text-green-600 font-semibold mt-6">Emergency Contact</h4>
+                
+                    <!-- Name Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="emerg_name" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Name </label>
+                        <input type="text" id="emerg_name" name="emergency_name" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm" placeholder="Emergency name" required>
+                    </div>
+                
+                    <!-- Relationship Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="emerg_relate" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Relationship </label>
+                        <input type="text" id="emerg_relate" name="emergency_relationship" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm" placeholder="Mother/ Father/ Brother etc" required>
+                    </div>
+                
+                    <!-- Phone Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="emerg_phone" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Phone </label>
+                        <input type="text" id="emerg_phone" name="emergency_phone" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm" placeholder="Contact Number" required>
+                    </div>
+                    
+                </div>
+                
+                <!-- Step 3: Academic Info -->
+                <div class="form-step">
+                    <h3 class="text-xl font-semibold mb-4 text-green-700">Academic Background</h3>
+    
+                    <!-- Academic Qualification Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="quality" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Academic Qualifications </label>
+                        <input type="text" id="quality" name="qualification" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm" placeholder="SSCE, OND, HND, B.Sc. etc." required>
+                    </div>
+                   
+                    <!-- Institution Attended Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="institute" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Institution Attended </label>
+                        <input type="text" id="institute" name="institution" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm" placeholder="Your School or University Name" >
+                    </div>
+                   
+                    <!-- Year of Graduation Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="year" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Year of Graduation (or Expected) </label>
+                        <input type="text" id="year" name="graduation_year" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm" placeholder="Year">
+                    </div>
+                   
+                    <!-- Filed of Study Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="field" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Filed of Study </label>
+                        <input type="text" id="field" name="field" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm" placeholder="e.g. Computer Science, Electrical Engineering" required>
+                    </div>
+                   
+                    <!-- Relevant Skills Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="skill" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Relevant Skills </label>
+                        <textarea name="skills" id="skill" rows="2" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm" placeholder="e.g. Python, Figma etc"></textarea>
+                    </div>
+                </div>
+                
+                <!-- Step 4: Course Enrollment info -->
+                <div class="form-step">
+                    <h3 class="text-xl font-semibold mb-4 text-green-700">Course Info</h3>
+    
+                    <!-- Course Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="course" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Course Track</label>
+                        <select name="course" id="course"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm bg-transparent form-input" required>
+                            <option value="">-- Select Course --</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="UI/UX Design">UI/UX Design</option>
+                            <option value="Android Development">Android Development</option>
+                            <option value="IOS Development">IOS Development</option>
+                            <option value="Solar Installation">Solar Installations</option>
+                            <option value="Electronics">Electronics</option>
+                        </select>
+                    </div>
+    
+                    <!-- Class mode Field -->
+                    <div id="classModeWrapper" data-aos="fade-right" data-aos-delay="300">
+                        <label for="class_mode" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Class Mode</label>
+                        <select name="class_mode" id="class_mode"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm bg-transparent form-input" required>
+                            <option value="">-- Select class mode --</option>
+                            <option value="Onsite">Onsite</option>
+                            <option value="Online">Online</option>
+                        </select>
+                    </div>                   
+                   
+                    <!-- Reason for Course Field -->
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <label for="reason" class="mt-4 block text-sm font-medium text-gray-700 mb-1">Why You Chose This Course: </label>
+                        <textarea name="reason" id="reason" rows="2" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm" placeholder="I chose this course to..."></textarea>
+                    </div>
+                </div>
+        
+                <!-- Navigation -->
+                <div class="flex justify-between mt-6">
+                    <button type="button" class="bg-gray-400 text-white px-4 py-2 rounded-md hidden" id="prevBtn" onclick="nextPrev(-1)"><i class="bi bi-arrow-left"></i>  Previous </button>
+                    <button type="button" class="bg-green-600 text-white px-4 py-2 rounded-md" id="nextBtn" onclick="nextPrev(1)">Next  <i class="bi bi-arrow-right"></i></button>
+                    <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-md hidden" id="submitBtn" onclick="clearFormSoon()">Submit  <i class="bi bi-check2-all text-lg"></i> </button>
+                </div>
+            </form>        
+            
+        </div>
+    </section>
+    
+    
+    <!-- Tailwind Helpers -->
+    <style>
+        .form-step { display: none; }
+        .form-step.active { display: block; }
+        .form-input {
+            /* margin-bottom: 0.5em; */
+            padding: 10px;
+            border-radius: .3em;
+        }
+        button[disabled] {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    </style>
+    
+    <!-- Step JavaScript Logic -->
+    <script>
+        
+        let currentStep = 0;
+        const steps = document.getElementsByClassName("form-step");
+        const progressBar = document.getElementById("progressBar");
+        const nextBtn = document.getElementById("nextBtn");
+        const prevBtn = document.getElementById("prevBtn");
+        const submitBtn = document.getElementById("submitBtn");
+    
+        function showStep(n) {
+            for (let i = 0; i < steps.length; i++) steps[i].classList.remove("active");
+            steps[n].classList.add("active");
+    
+            prevBtn.style.display = n === 0 ? "none" : "inline-block";
+            nextBtn.style.display = n === steps.length - 1 ? "none" : "inline-block";
+            submitBtn.style.display = n === steps.length - 1 ? "inline-block" : "none";
+    
+            const progress = ((n + 1) / steps.length) * 100;
+            progressBar.style.width = progress + "%";
+    
+            // Initial validation check on step show
+            validateCurrentStep();
+        }
+    
+        function nextPrev(n) {
+            if (n === 1 && !validateCurrentStep()) return false;
+            currentStep += n;
+            showStep(currentStep);
+        }
+    
+        function validateCurrentStep() {
+            let valid = true;
+            const inputs = steps[currentStep].querySelectorAll("input, select, textarea");
+            inputs.forEach(input => {
+                const label = input.closest('label');
+                const value = input.value.trim();
+                const errorEl = getOrCreateErrorElement(input);
+    
+                if (input.hasAttribute("required") && value === "") {
+                    // input.classList.add("border-red-500");
+                    
+                    errorEl.classList.remove("hidden");
+                    valid = false;
+                } else {
+                    // input.classList.remove("border-red-500");
+                    errorEl.classList.add("hidden");
+                }
+            });
+    
+            nextBtn.disabled = !valid;
+            submitBtn.disabled = !valid;
+            return valid;
+        }
+    
+        function getOrCreateErrorElement(input) {
+            let label = document.querySelector(`label[for="${input.id}"]`);
+            let errorId = input.name + "_error";
+            let errorEl = document.getElementById(errorId);
+            if (errorEl == null) {
+                errorEl = document.createElement("span");
+                errorEl.id = errorId;
+                errorEl.className = "text-sm text-red-500 hidden";
+                errorEl.innerText = "*";
+                // input.insertAdjacentElement('afterend', errorEl);
+                label.insertAdjacentElement('beforeend', errorEl);
+            }
+            return errorEl;
+        }
+    
+        document.addEventListener("DOMContentLoaded", () => {
+            showStep(currentStep);
+    
+            // Real-time input validation
+            const allInputs = document.querySelectorAll("input, select, textarea");
+            allInputs.forEach(input => {
+                input.addEventListener("input", validateCurrentStep);
+            });
+        });
+
+        document.getElementById("course").addEventListener("change", function() {
+            const selectedCourse = this.value;
+            const classModeWrapper = document.getElementById("classModeWrapper");
+            const classModeSelect = document.getElementById("class_mode");
+
+            if (selectedCourse === "Solar Installation" || selectedCourse === "Electronics") {
+                classModeWrapper.style.display = "none";
+                classModeSelect.value = "Onsite";  
+                classModeSelect.disable = true;
+                validateCurrentStep()
+            } else {
+                classModeWrapper.style.display = "block";
+                classModeSelect.value = "";
+                classModeSelect.disabled = false;
+                validateCurrentStep()
+            }
+        });
+
+        function clearFormSoon() {
+            // Delay the clearing just slightly to let the form submit
+            setTimeout(() => {
+                document.getElementById('bioForm').reset();
+            }, 100); // 100ms delay ensures form submits before reset
+        }
+
+        window.onload = function () {
+            // Reset form when user lands on the page (including from "Back")
+            const form = document.getElementById('bioForm');
+            if (form) {
+                form.reset();
+
+                // Reset all custom progress & states (for multi-step forms)
+                currentStep = 0;
+                showStep(currentStep);
+            }
+        }
+    </script>
+    
+   
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'js/tailwind.js'%}"></script>
+    <script src="{% static 'js/spacesoft.js' %}"></script>
+    
+</body>
+</html>
+
+<!-- contact us -->

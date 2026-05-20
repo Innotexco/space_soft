@@ -1,0 +1,254 @@
+{% extends "base.html" %}
+{% load static tailwind_tags %}
+
+{% block title %}Spacesoft | Home{% endblock %}
+
+{% block content %} 
+    
+    {% include 'carousel.html' with images=gallery_a carousel_id='carousel' %}
+    
+    <!--SECTION ONE OUR SERVICES-->
+    <section class="grid-cols-1 grid px-5 md:px-10 lg:px-32 xl:px-64 pt-10 items-center text-center gap-10 ">
+        <!-- Title -->
+        <div data-aos="fade-up">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Our Services</h1>
+        </div>
+
+        <!-- CAREER DEVELOPMENT OVERVIEW -->
+        <div data-aos="flip-right" class="text-gray-950 grid grid-cols-1 2xl:grid-cols-2 gap-6 lg:gap-10 px-4 py-6 lg:px-8 shadow-lg rounded-md shadow-neutral-500 bg-white mb-8">
+
+            <!-- Image Section -->
+            <div class="flex justify-center items-center">
+            <img src="{% static 'img/career_dev.jpg' %}" 
+                class="w-full sm:h-[400px] rounded-lg object-cover" 
+                alt="Career Development Overview">
+            </div>
+        
+            <!-- Content Section -->
+            <div data-aos="fade-left" class="text-start flex flex-col justify-center">
+            <h1 class="text-green-500 text-2xl font-semibold">Career Development</h1>
+            <p class="pt-5 text-justify text-lg leading-relaxed">
+                At SpaceSoft, we believe careers are built, not born. Our Career Development Program is a gateway for individuals ready to dive into the world of technology, energy, and innovation. Whether you're starting fresh or upskilling, our hands-on training equips you with the knowledge, tools, and confidence to thrive in a competitive job market.
+            </p>
+            <h2 class="text-green-500 text-xl font-medium pt-4 pb-2">
+                Why Enroll in Our Program?
+                <hr class="border-t-2 border-green-500 mt-2">
+            </h2>
+            <p class="text-justify text-lg leading-relaxed">
+                Our training modules are led by professionals and structured around real-world projects, every course is designed to bridge the gap between learning and doing. You don’t just gain skills, you gain direction.
+            </p>
+            <ul class="list-disc list-inside text-lg leading-relaxed pt-3">
+                <li>Project-based learning and mentorship</li>
+                <li>Courses in Web, Mobile, UI/UX, Solar, and Electronics</li>
+                <li>Flexible training schedules and real-world case studies</li>
+                <li>Certification and career placement support</li>
+            </ul>
+            <p class="pt-4 text-justify text-lg leading-relaxed">
+                Take the next step toward a successful tech or energy career with our personalized, high-impact courses.
+            </p>
+            <center class="pt-6">
+                <a href="{% url 'career_dev' %}">
+                <button class="px-6 py-3 bg-[#56c734] shadow-md shadow-gray-700 text-white rounded-md hover:bg-[#57af3c] sm:text-lg transition duration-300">
+                    Explore Courses
+                </button>
+                </a>
+            </center>
+            </div>
+        </div>
+  
+
+        <!-- WEBSITE DEVELOPMENT -->
+        <div data-aos="flip-right" class="text-gray-950 grid grid-cols-1 2xl:grid-cols-2 gap-6 lg:gap-10 px-4 py-6 lg:px-8 shadow-lg rounded-md shadow-neutral-500 bg-white mb-8">
+            <!-- Image Section -->
+            <div class="flex justify-center items-center">
+                <img src="{% static 'img/w1.jpg' %}" 
+                    class="w-full sm:h-[400px] rounded-lg" 
+                    alt="Website Development">
+            </div>
+
+            <!-- Content Section -->
+            <div data-aos="fade-left" class="text-start flex flex-col justify-center">
+                <h1 class="text-green-500 text-2xl font-semibold">Software Development</h1>
+                <p class="pt-5 text-justify text-lg leading-relaxed">
+                    We craft stunning, functional, and user-centric websites tailored to elevate your brand. By blending creativity, modern technology, and a results-driven approach, we help businesses establish a powerful online presence that engages audiences and drives conversions.
+                </p>
+                <h2 class="text-green-500 text-xl font-medium pt-4 pb-2">
+                    Why Choose Us for Web Development? 
+                    <hr class="border-t-2 border-green-500 mt-2">
+                </h2>
+                <p class="text-justify text-lg leading-relaxed">
+                    A successful website is more than just an online brochure — it’s a strategic tool that tells your story, 
+                    attracts customers, and drives growth. Our expert developers and designers ensure every website:
+                </p>
+                <ul class="list-disc list-inside text-lg leading-relaxed pt-3">
+                    <li>Delivers an exceptional user experience (UX)</li>
+                    <li>Is fast, responsive, and mobile-friendly</li>
+                    <li>Adheres to SEO best practices for higher search rankings</li>
+                    <li>Integrates seamlessly with your business needs</li>
+                </ul>
+                <p class="pt-4 text-justify text-lg leading-relaxed">
+                    Whether you need a simple site, an e-commerce platform, or a complex web solution, 
+                    we turn your ideas into reality with a focus on quality, performance, and results.
+                </p>
+                <center class="pt-6">
+                    
+                    <a href="{% url 'software_dev' %}">
+                        <button class="px-6 py-3 bg-[#56c734] shadow-md shadow-gray-700 text-white rounded-md hover:bg-[#57af3c] sm:text-lg transition duration-300" >
+                            Read More
+                        </button>
+                    </a>
+                </center>
+            </div>
+        </div>
+
+        <!-- Energy Storage System -->
+        <div data-aos="fade-down" class="text-gray-950 gap-6 grid grid-cols-1 2xl:grid-cols-2 lg:gap-10 px-4 py-6 lg:px-8 shadow-lg rounded-md shadow-neutral-500 bg-white mb-8">
+            <!-- Image Section -->
+            <div class="flex justify-center items-center">
+                <img src="{% static 'img/s1.jpg' %}" 
+                    class="w-full sm:h-[400px] rounded-lg" 
+                    alt="Energy Storage System">
+            </div>
+
+            <!-- Content Section -->
+            <div data-aos="flip-left" class="text-start flex flex-col justify-center">
+                <h1 class="text-green-500 text-2xl font-semibold">Energy Storage System (ESS)</h1>
+                <p class="pt-4 text-justify text-lg leading-relaxed">
+                    Our Energy Storage System (ESS) is designed to maximize the efficiency of your energy consumption while reducing costs. Whether you're looking to store excess solar energy or improve your grid reliability, our state-of-the-art ESS solutions offer seamless integration with your existing infrastructure. The system ensures optimized energy usage, providing backup power during peak demand hours or unexpected outages, contributing to sustainability and cost savings.
+                </p>
+                <p class="pt-4 text-justify text-lg leading-relaxed">
+                    With advanced technology and high-capacity storage, our ESS empowers businesses and homeowners to take control of their energy needs. By storing energy when demand is low, you can use it when energy prices are at their peak or when there is a power disruption, ensuring that you're always connected and ready. Our systems are tailored to your unique energy requirements, offering scalability and flexibility for both small and large installations.
+                </p>
+                <center class="pt-6">
+                    <a href="{% url 'battery' %}">
+                        <button class="px-6 py-3 bg-[#56c734] shadow-md shadow-gray-700 text-white rounded-md hover:bg-[#57af3c] text-lg transition duration-300" onclick="mobile()">
+                            Read More
+                        </button>
+                    </a>
+                </center>
+            </div>
+        </div>
+
+        <!-- Inverter -->
+        <div data-aos="fade-up" class="text-gray-950 gap-6 grid grid-cols-1 2xl:grid-cols-2 lg:gap-10 px-4 py-6 lg:px-8 shadow-lg rounded-md shadow-neutral-500 bg-white mb-8">
+            <!-- Image Section -->
+            <div class="flex justify-center items-center">
+                <img src="{% static 'img/in1.webp' %}" 
+                    class="w-full sm:h-[400px] object-cover rounded-lg" 
+                    alt="Power Inverter">
+            </div>
+
+            <!-- Content Section -->
+            <div data-aos="fade-right" class="text-start flex flex-col justify-center">
+                <h1 class="text-green-500 text-2xl font-semibold">Solar Power Solutions</h1>
+                <p class="pt-4 text-justify text-lg leading-relaxed">
+                    Experience uninterrupted power supply with our advanced Power Inverter systems. Designed to seamlessly convert DC energy into stable, high-quality AC power, our inverters are perfect for homes, businesses, and industrial use.  
+                </p>
+                <p class="pt-4 text-justify text-lg leading-relaxed">
+                    Equipped with smart energy management, durable construction, and high efficiency, our inverters deliver reliable performance even under the most demanding conditions. Whether you face power outages or need backup for critical systems, our inverters ensure peace of mind and continuous energy flow.
+                </p>
+                <center class="pt-6">
+                    <a href="{% url 'inverter' %}">
+                        <button class="px-6 py-3 bg-[#56c734] shadow-md shadow-gray-700 text-white rounded-md hover:bg-[#57af3c] text-lg transition duration-300" onclick="bms()">
+                            Read More
+                        </button>
+                    </a>
+                </center>
+            </div>
+        </div>
+
+    </section>
+    
+    <!-- ABOUT US SECTION -->
+    <section class="px-5 md:px-10 lg:px-32 xl:px-64 py-10  bg-slate-100">
+         <!-- Section Title -->
+        <h1 data-aos="fade-up" class="text-3xl font-bold text-center mb-5">About Us</h1>
+        
+        <div class=" bg-white shadow-lg rounded-md shadow-neutral-500 group grid grid-cols-1 gap-10 px-4 text-center relative py-4">
+
+            <!-- Content Section -->
+            <div>
+                <img src="{% static 'img/aboutpic2.jpg' %}" class="w-full sm:h-[460px] md:h-[35em] md:object-fill rounded-md" alt="About Us">
+            </div>
+            <div data-aos="flip-right" class="flex flex-col lg:flex-row justify-between items-start gap-5 text-start">
+                <!-- Left Content -->
+                <div class="w-full xl:w-1/2">
+                    <div class="tracking-wide pt-2 text-lg text-gray-700 leading-relaxed">
+                        <p class="text-justify">
+                            Spacesoft Integral System Ltd is a forward thinking ICT and energy solution company commited to building smarter, and more connected enviroments. We specializes in <strong>Software Development (Website and Mobile Apps)</strong>. We also offer reliable renewable energy solutions, Like <strong>Solar System Installations</strong>, and <strong>Inverter setup</strong> 
+                        </p>
+                        <p class="py-4 text-justify">
+                            In a short time, Spacesoft has earned a reputation as one of Nigeria's leading ICT Companies and renewable energy Companies, driven by integrity, 
+                            cost-innovation, and deep commitment to solving real-world challenges.
+                        </p>
+                        <h2 class="text-green-700 text-center text-2xl font-bold pb-2 w-full">We Create, Design, Power, and Connect.</h2>
+                    </div>
+                </div>
+                
+                <!-- Right Content -->
+                <div class="w-full xl:w-1/2">
+                    <div class="tracking-wide text-lg text-gray-700 text-justify leading-relaxed">
+                        
+                        <!-- Mission -->
+                        <h2 class="text-green-600 text-2xl font-semibold pt-2 pb-2">Our Mission</h2>
+                        <p class="pt-2">
+                            To design, develop, and deliver cutting-edge electronics, sustainable green energy solutions, and locally-driven software innovations that empower Africa’s industries, reduce import dependency, and accelerate the continent’s technological and economic self-reliance.
+                        </p>
+                        
+                        <!-- Vision -->
+                        <h2 class="text-green-600 text-2xl font-semibold pt-6 pb-2">Our Vision</h2>
+                        <p class="pt-2">
+                            To be Africa’s leading hub for indigenous innovation in electronics, clean energy, and software technology-driving a future where Africa builds what it needs, powers its growth sustainably, and competes on the global stage with locally developed solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Button -->
+            <div class="">
+                <a href="{% url 'about' %}">
+                    <button class="px-9 py-2 bg-[#56c734] shadow-md shadow-gray-700 text-white rounded-md hover:bg-[#57af3c] text-lg transition duration-300">
+                        See More
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION TWO-->
+    <section>
+        <div  class=" py-10 px-5 md:px-10 lg:px-32 xl:px-64 lg:tracking-widest bg-neutral-700 sm:h-[500px]">
+            <div data-aos="zoom-in-up" class=" text-white font-serif grid-cols-1 grid gap-3 sm:gap-6 ">
+                <h1 class=" text-3xl sm:text-6xl">We Create, </h1>
+                <h1 class=" text-3xl sm:text-6xl">Design, Power</h1>
+                <h1 class=" text-3xl sm:text-6xl"> and Connect</h1>
+                <h1 class=" sm:text-xl">Have a question or need a custom quote?</h1>
+                <a href="{% url 'contact' %}">
+                    <button class="px-6 py-3 bg-[#56c734] shadow-md shadow-gray-700 text-white rounded-md hover:bg-[#57af3c] text-lg transition duration-300">
+                        Contact Us
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION FOUR, OUR PARTNERS -->
+    <section class=" py-10 my-10 flex justify-center flex-col shadow-lg rounded-md shadow-neutral-500 gap-10 bg-neutral-50">
+        <div data-aos="fade-up" class="text-center">
+            <h1 class="text-4xl font-semibold text-gray-800 pb-5">Our Partners</h1>
+        </div>
+
+        <!-- Partner Logos -->
+        <div class="flex flex-wrap justify-around gap-10 lg:gap-16 items-center">
+            <div data-aos="fade-left" data-aos-delay="100" class="flex justify-center">
+                <img src="{% static 'img/cool.png' %}" class="w-[120px] sm:w-[150px] lg:w-[180px] transition-transform transform hover:scale-110" alt="Partner 1">
+            </div>
+            <div data-aos="fade-left" data-aos-delay="200" class="flex justify-center">
+                <img src="{% static 'img/dicnetlogo1.jpg' %}" class="w-[120px] sm:w-[150px] lg:w-[180px] transition-transform transform hover:scale-110" alt="Partner 2">
+            </div>
+            <div data-aos="fade-left" data-aos-delay="300" class="flex justify-center">
+                <img src="{% static 'img/ARK-J_Ltd.png' %}" class="w-[120px] sm:w-[150px] lg:w-[180px] pt-2 transition-transform transform hover:scale-110" alt="Partner 3">
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
