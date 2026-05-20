@@ -144,7 +144,7 @@ USE_TZ = True
 
 STATIC_URL = 'static_root/'
 STATICFILES_DIRS = [
-    # os.path.join(BASE_DIR, "static_root"),
+    os.path.join(BASE_DIR, "static_root"),
     os.path.join(BASE_DIR, "theme", "static")
 ]
 # STATIC_ROOT = os.path.join("static_root")
