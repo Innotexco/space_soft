@@ -8,5 +8,3 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('space_soft_app.urls')),
 ] 
-if settings.DEBUG:
-    urlpatterns + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
