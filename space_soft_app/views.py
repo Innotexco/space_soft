@@ -4,6 +4,7 @@ from django.core.mail import send_mail, BadHeaderError, EmailMessage, get_connec
 from django.contrib import messages
 from .models import *
 from .forms import *
+from django.templatetags.static import static
 
 
 # email functions
@@ -32,11 +33,11 @@ def send_with_diffrent_smtp(subject, body, user, password, to):
 
 def home(request):
     gallery_a = [
-        {'url': '/static_root/img/sol.jpg'},
-        {'url': '/static_root/img/we.png'},
-        {'url': '/static_root/img/electronic.jpg'},
+        {'url': static('img/sol.jpg')},
+        {'url': static('img/we.png')},
+        {'url': static('img/electronic.jpg')},
     ]
-    return render(request, 'space_soft/home.html', dict(gallery_a = gallery_a))
+    return render(request, 'space_soft/home.html', dict(gallery_a=gallery_a))
 
 def software_dev(request):
     return render(request, 'space_soft/software_dev.html')
